@@ -1501,6 +1501,19 @@ textarea { resize: vertical; min-height: 110px; }
 /* ── Hero short variant ──────────────────────────────────── */
 .hero--short { padding-top: calc(var(--nav-h) + 48px); padding-bottom: 48px; }
 
+/* ── Études de cas — grille responsive ──────────────────── */
+.case-study-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+@media (max-width: 768px) {
+  .case-study-card { grid-template-columns: 1fr; }
+}
+
 /* ── Contact layout responsive ───────────────────────────── */
 .contact-layout { display: grid; grid-template-columns: 1fr 420px; gap: 64px; max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
 @media (max-width: 900px) {
