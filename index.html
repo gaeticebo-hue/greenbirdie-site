@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conseil en énergie pour entreprises — GREENBIRDIE</title>
+  <meta name="description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable. +3 000 sites accompagnés en France. Expert depuis 2005.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.greenbirdie.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Conseil en énergie pour entreprises — GREENBIRDIE">
+  <meta property="og:description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable.">
+  <meta property="og:url" content="https://www.greenbirdie.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.greenbirdie.com/assets/images/og-image.jpg">
+
+  <!-- Fonts — Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Tailwind CSS (Play CDN — preflight désactivé pour coexister avec main.css) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            'gb-dark': '#1a1a1a',
+            'gb-gold': '#b8962e',
+            'gb-green': '#1a3d2b',
+            'gb-blue': '#1a3a5c',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Données structurées -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "GREENBIRDIE",
+    "description": "Cabinet d'ingénierie et de conseil en stratégie énergétique",
+    "foundingDate": "2005",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "13, rue Raymond Losserand",
+      "postalCode": "75014",
+      "addressLocality": "Paris",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33144081050",
+    "email": "info@greenbirdie.com",
+    "url": "https://www.greenbirdie.com",
+    "areaServed": "France",
+    "slogan": "L'énergie optimiste"
+  }
+  </script>
+</head>
+<body>
+
+<!-- ═══════ NAVIGATION ═══════ -->
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="GREENBIRDIE — Accueil">
+      <img src="assets/images/logo-greenbirdie.png" alt="GREENBIRDIE" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:#1a1a1a;letter-spacing:-0.5px;">GREENBIRDIE</span>
+    </a>
+
+    <ul class="nav-menu" role="list">
+      <li class="nav-item">
+        <a href="achat-energie.html" class="nav-link">
+          Acheter l'énergie
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-section">Stratégies</div>
+          <a href="achat-energie.html#strategie">Stratégie d'achat</a>
+          <a href="achat-energie.html#contrats-groupes">Contrats groupes</a>
+          <a href="achat-energie.html#ppa">PPA et PPA multiacheteurs</a>
+          <a href="achat-energie.html#vppa">VPPA et couverture financière</a>
+          <div class="nav-dropdown-section">Opérationnel</div>
+          <a href="achat-energie.html#consultation">Consultation fournisseurs</a>
+          <a href="achat-energie.html#suivi">Suivi des marchés et budgets</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="flexibilite-performance.html" class="nav-link">
+          Consommer au bon moment
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-section">Performance</div>
+          <a href="flexibilite-performance.html#audit">Audit et performance énergétique</a>
+          <a href="flexibilite-performance.html#decret-tertiaire">Décret Tertiaire et OPERAT</a>
+          <a href="flexibilite-performance.html#bacs">Décret BACS et GTB</a>
+          <div class="nav-dropdown-section">Valorisation</div>
+          <a href="flexibilite-performance.html#effacement">Effacement et flexibilité</a>
+          <a href="flexibilite-performance.html#stockage">Stockage électrique et thermique</a>
+          <a href="flexibilite-performance.html#carbone">Performance carbone</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="production-energie.html" class="nav-link">
+          Produire son énergie
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-section">Installations</div>
+          <a href="production-energie.html#toiture">Photovoltaïque en toiture</a>
+          <a href="production-energie.html#ombriere">Ombrières de parking</a>
+          <a href="production-energie.html#sol">Centrales au sol</a>
+          <div class="nav-dropdown-section">Services</div>
+          <a href="production-energie.html#autoconsommation">Autoconsommation</a>
+          <a href="production-energie.html#moe">Maîtrise d'œuvre</a>
+          <a href="production-energie.html#valorisation">Valorisation de la production</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="reglementation.html" class="nav-link">Réglementation</a>
+      </li>
+      <li class="nav-item">
+        <a href="#secteurs" class="nav-link">
+          Secteurs
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="secteurs/grande-distribution.html">Grande distribution</a>
+          <a href="secteurs/logistique.html">Logistique et immobilier</a>
+          <a href="secteurs/hotellerie.html">Hôtellerie et tourisme</a>
+          <a href="secteurs/industrie.html">Industrie et ETI</a>
+          <a href="secteurs/tertiaire.html">Tertiaire et immobilier</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="a-propos.html" class="nav-link">GREENBIRDIE</a>
+      </li>
+    </ul>
+
+    <a href="contact.html" class="nav-cta">
+      Parler à un expert
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="nav-mobile-overlay" role="dialog" aria-label="Menu mobile">
+  <ul>
+    <li><a href="achat-energie.html">Acheter l'énergie</a></li>
+    <li><a href="flexibilite-performance.html">Consommer au bon moment</a></li>
+    <li><a href="production-energie.html">Produire son énergie</a></li>
+    <li><a href="reglementation.html">Réglementation</a></li>
+    <div class="nav-mobile-section">Secteurs</div>
+    <li><a href="secteurs/grande-distribution.html">Grande distribution</a></li>
+    <li><a href="secteurs/logistique.html">Logistique</a></li>
+    <li><a href="secteurs/hotellerie.html">Hôtellerie</a></li>
+    <li><a href="secteurs/industrie.html">Industrie et ETI</a></li>
+    <li><a href="secteurs/tertiaire.html">Tertiaire</a></li>
+    <div class="nav-mobile-section">GREENBIRDIE</div>
+    <li><a href="a-propos.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Cabinet d'ingénierie et de conseil en énergie — Depuis 2005</div>
+    <h1>Acheter, piloter<br>et produire<br><em>votre énergie.</em></h1>
+    <p class="hero-sub">GREENBIRDIE accompagne les entreprises et les patrimoines multisites dans la maîtrise de leurs coûts, de leurs consommations et de leur production énergétique — de la stratégie jusqu'à la mise en œuvre.</p>
+    <div class="bloc-pills">
+      <a href="achat-energie.html" class="bloc-pill bloc-pill--1">⚡ Acheter au bon prix</a>
+      <a href="flexibilite-performance.html" class="bloc-pill bloc-pill--2">🎯 Consommer au bon moment</a>
+      <a href="production-energie.html" class="bloc-pill bloc-pill--3">☀️ Produire son énergie</a>
+    </div>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn btn--white btn--lg">
+        Demander un diagnostic gratuit
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#blocs" class="btn btn--outline-white">Découvrir nos expertises</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ RÉFÉRENCES CLIENTS ═══════ -->
+<div class="refs-strip">
+  <div class="refs-strip-inner">
+    <span class="refs-label">Ils nous font confiance</span>
+    <div class="refs-logos">
+      <span class="ref-logo">Accor</span>
+      <span class="ref-logo">Louvre Hotels</span>
+      <span class="ref-logo">Carrefour</span>
+      <span class="ref-logo">Intermarché</span>
+      <span class="ref-logo">L'Oréal</span>
+      <span class="ref-logo">Safran</span>
+      <span class="ref-logo">Lidl</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ STATS ═══════ -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-num">+3 000</div>
+      <div class="stat-label">Sites accompagnés<br>en gestion énergétique</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">20 ans</div>
+      <div class="stat-label">D'expertise indépendante<br>en énergie</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">+300 M€</div>
+      <div class="stat-label">D'achats d'énergie<br>accompagnés / an</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">+500</div>
+      <div class="stat-label">Références<br>photovoltaïques</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ 3 BLOCS STRATÉGIQUES ═══════ -->
+<section class="section" id="blocs">
+  <div class="section-header">
+    <div class="section-tag">Notre approche</div>
+    <h2>Une chaîne de valeur énergétique complète</h2>
+    <p class="lead">L'énergie d'une entreprise se pilote sur trois dimensions complémentaires. GREENBIRDIE intervient sur l'ensemble de cette chaîne — de la stratégie d'achat jusqu'à la valorisation de la production — pour maximiser la performance économique et environnementale.</p>
+  </div>
+
+  <div class="blocs-grid">
+    <!-- Bloc 1 -->
+    <a href="achat-energie.html" class="bloc-card bloc-card--1">
+      <div class="bloc-card-icon">⚡</div>
+      <h3>Acheter l'énergie au bon prix</h3>
+      <p>Définir une stratégie d'achat adaptée à votre exposition aux marchés, organiser les consultations, structurer les contrats et piloter vos budgets énergétiques sur la durée.</p>
+      <ul class="bloc-card-list">
+        <li>Stratégie d'achat et consultation fournisseurs</li>
+        <li>Contrats groupes et achats multisites</li>
+        <li>PPA, PPA multiacheteurs et VPPA</li>
+        <li>Suivi des marchés et contrôle budgétaire</li>
+      </ul>
+      <span class="bloc-card-cta">
+        Optimiser mes achats d'énergie
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <!-- Bloc 2 -->
+    <a href="flexibilite-performance.html" class="bloc-card bloc-card--2">
+      <div class="bloc-card-icon">🎯</div>
+      <h3>Consommer au bon moment</h3>
+      <p>Réduire les consommations, piloter les usages selon les prix de marché, valoriser les flexibilités et structurer une stratégie carbone cohérente avec vos engagements RSE.</p>
+      <ul class="bloc-card-list">
+        <li>Audit et performance énergétique</li>
+        <li>Décret Tertiaire, BACS et systèmes de pilotage</li>
+        <li>Effacement et flexibilité explicite</li>
+        <li>Stockage électrique et thermique</li>
+      </ul>
+      <span class="bloc-card-cta">
+        Valoriser ma flexibilité
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <!-- Bloc 3 -->
+    <a href="production-energie.html" class="bloc-card bloc-card--3">
+      <div class="bloc-card-icon">☀️</div>
+      <h3>Produire et valoriser son énergie</h3>
+      <p>Identifier les potentiels de production sur votre patrimoine, concevoir, financer et réaliser vos installations, puis valoriser chaque kilowattheure produit au meilleur prix.</p>
+      <ul class="bloc-card-list">
+        <li>Photovoltaïque : toiture, ombrières, sol</li>
+        <li>Autoconsommation individuelle et collective</li>
+        <li>Maîtrise d'œuvre et suivi de chantier</li>
+        <li>PPA solaire et valorisation de la production</li>
+      </ul>
+      <span class="bloc-card-cta">
+        Développer ma production
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════ POSITIONNEMENT / DIFFÉRENCIATION ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Ce qui nous différencie</div>
+    <h2>Un partenaire stratégique, pas un prestataire de service</h2>
+    <p class="lead">GREENBIRDIE intervient très en amont des décisions — avant même la mise en concurrence — pour construire des stratégies cohérentes avec vos objectifs financiers, réglementaires et environnementaux.</p>
+  </div>
+
+  <div class="data-cards-grid">
+    <div class="data-card">
+      <i data-lucide="shield-check" class="data-card-icon"></i>
+      <h3>Conseil indépendant</h3>
+      <p>Nous n'achetons pas d'énergie, nous ne gérons pas d'actifs en propre. Notre rémunération est indépendante des choix que nous recommandons — ce qui garantit l'objectivité de nos analyses.</p>
+    </div>
+    <div class="data-card">
+      <i data-lucide="bar-chart-2" class="data-card-icon"></i>
+      <h3>Expertise des marchés de l'énergie</h3>
+      <p>Suivi continu des marchés spot, à terme et de capacité. Nos décisions d'achat sont fondées sur des données de marché réelles, pas sur des estimations.</p>
+    </div>
+    <div class="data-card">
+      <i data-lucide="scale" class="data-card-icon"></i>
+      <h3>Maîtrise réglementaire</h3>
+      <p>Décret Tertiaire, BACS, loi APER, audits obligatoires, mécanismes de capacité : nous transformons vos obligations en leviers de performance économique.</p>
+    </div>
+    <div class="data-card">
+      <i data-lucide="cpu" class="data-card-icon"></i>
+      <h3>Données et intelligence artificielle</h3>
+      <p>L'expertise de nos ingénieurs, augmentée par la donnée et l'IA. Consolidation multisite, détection d'anomalies et optimisation en temps réel.</p>
+    </div>
+    <div class="data-card">
+      <i data-lucide="wrench" class="data-card-icon"></i>
+      <h3>Capacité opérationnelle</h3>
+      <p>Études de faisabilité, maîtrise d'œuvre, consultations, accompagnement contractuel : nous allons jusqu'à la mise en œuvre, pas seulement la stratégie.</p>
+    </div>
+    <div class="data-card">
+      <i data-lucide="map-pin" class="data-card-icon"></i>
+      <h3>Couverture nationale</h3>
+      <p>Paris, Bordeaux, Toulouse, Nantes, Mont-de-Marsan, Saint-Germain-en-Laye, La Réunion — une présence territoriale au service de vos portefeuilles multisites.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════ RÉGLEMENTATION ═══════ -->
+<section class="section--cream-dark">
+  <div class="section-inner">
+    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
+      <div class="two-col">
+        <div>
+          <div class="section-tag">Réglementation énergétique</div>
+          <h2>Transformer les obligations en opportunités</h2>
+          <p class="lead" style="margin-bottom:24px;">Les réglementations énergétiques se multiplient et leurs échéances se rapprochent. GREENBIRDIE vous aide à identifier vos obligations, à comprendre les enjeux financiers et à construire des plans d'action qui créent de la valeur.</p>
+          <ul class="checklist">
+            <li>Décret Tertiaire : objectifs 2030 à atteindre sous peine de sanctions</li>
+            <li>Décret BACS : pilotage automatisé des systèmes du bâtiment</li>
+            <li>Loi APER : obligation photovoltaïque sur les parkings et bâtiments</li>
+            <li>Audits énergétiques obligatoires pour les grandes entreprises</li>
+            <li>Mécanismes de capacité et marchés de flexibilité</li>
+          </ul>
+          <a href="reglementation.html" class="btn btn--outline mt-24">
+            Explorer la réglementation
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div>
+          <div class="alert-box--red alert-box" style="margin-bottom:16px;">
+            <h4>Décret Tertiaire — Échéance 2030</h4>
+            <p>Les bâtiments tertiaires de plus de 1 000 m² doivent réduire leur consommation de 40 % d'ici 2030 (base 2010). Non-conformité : jusqu'à 7 500 € d'amende et publication publique.</p>
+          </div>
+          <div class="alert-box" style="margin-bottom:16px;">
+            <h4>Loi APER — Parkings et bâtiments</h4>
+            <p>Obligation de couvrir les ombrières de parking et certains toits de panneaux photovoltaïques. Les échéances débutent en 2026. GREENBIRDIE réalise vos études de faisabilité et gère les appels d'offres.</p>
+          </div>
+          <div class="info-box">
+            <h4>Décret BACS — Pilotage automatisé</h4>
+            <p>Les bâtiments tertiaires de plus de 290 kW de puissance de chauffage ou de climatisation doivent être équipés d'un système de régulation automatique d'ici 2025–2027.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SECTEURS ═══════ -->
+<section class="section" id="secteurs">
+  <div class="section-header">
+    <div class="section-tag">Nos secteurs</div>
+    <h2>Une expertise adaptée à votre secteur d'activité</h2>
+    <p class="lead">Les enjeux énergétiques varient fortement selon les secteurs. GREENBIRDIE dispose d'une connaissance approfondie de chaque secteur et adapte ses recommandations aux contraintes réglementaires, techniques et économiques qui vous sont propres.</p>
+  </div>
+
+  <div class="features-grid">
+    <a href="secteurs/grande-distribution.html" class="feature-card" style="text-decoration:none;">
+      <div class="feature-icon">🛒</div>
+      <h3>Grande distribution et commerce</h3>
+      <p>Hypermarchés, supermarchés, centres commerciaux, réseaux de points de vente. Contrats groupes, PPA multiacheteurs, obligations photovoltaïques, décret tertiaire.</p>
+    </a>
+    <a href="secteurs/logistique.html" class="feature-card" style="text-decoration:none;">
+      <div class="feature-icon">🏭</div>
+      <h3>Logistique et immobilier logistique</h3>
+      <p>Entrepôts, plateformes, foncières logistiques. Grandes toitures photovoltaïques, recharge électrique des flottes, décret tertiaire, valorisation des actifs.</p>
+    </a>
+    <a href="secteurs/hotellerie.html" class="feature-card" style="text-decoration:none;">
+      <div class="feature-icon">🏨</div>
+      <h3>Hôtellerie et tourisme</h3>
+      <p>Groupes hôteliers, villages de vacances, campings, parcs de loisirs. Décret tertiaire, performance énergétique, eau chaude, autoconsommation, saisonnalité.</p>
+    </a>
+    <a href="secteurs/industrie.html" class="feature-card" style="text-decoration:none;">
+      <div class="feature-icon">⚙️</div>
+      <h3>Industrie et ETI</h3>
+      <p>Groupes industriels, sites électro-intensifs, ETI multisites. Stratégie d'achat, PPA et VPPA, flexibilité des procédés, effacement, décarbonation.</p>
+    </a>
+    <a href="secteurs/tertiaire.html" class="feature-card" style="text-decoration:none;">
+      <div class="feature-icon">🏢</div>
+      <h3>Tertiaire et immobilier</h3>
+      <p>Bureaux, foncières, collectivités, santé, enseignement. Décret tertiaire, BACS, pilotage patrimonial multisite, plans pluriannuels d'investissement.</p>
+    </a>
+    <a href="contact.html" class="feature-card" style="text-decoration:none;border-style:dashed;">
+      <div class="feature-icon">💬</div>
+      <h3>Votre secteur n'est pas listé ?</h3>
+      <p>GREENBIRDIE intervient dans de nombreux secteurs d'activité. Contactez-nous pour évaluer comment nous pouvons vous accompagner dans votre stratégie énergétique.</p>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════ PLATEFORME NUMÉRIQUE ═══════ -->
+<section class="section--dark">
+  <div class="section-inner">
+    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
+      <div class="section-tag">Outils numériques</div>
+      <h2 style="color:white;margin-bottom:16px;">GREENBIRDIE Énergie — votre espace de pilotage</h2>
+      <p class="lead" style="color:rgba(255,255,255,0.55);margin-bottom:48px;max-width:580px;">L'expertise de nos ingénieurs, augmentée par la donnée et l'intelligence artificielle. Un espace numérique inclus dans votre accompagnement pour consolider vos données, suivre vos budgets et piloter vos obligations réglementaires.</p>
+
+      <div class="platform-layout">
+        <div class="platform-bullets">
+          <div class="platform-bullet">
+            <div class="platform-bullet-icon">📊</div>
+            <div>
+              <h4>Consolidation multisite</h4>
+              <p>Visualisez l'ensemble de votre patrimoine énergétique en un seul espace — consommations, coûts, facteurs d'émission, indicateurs réglementaires.</p>
+            </div>
+          </div>
+          <div class="platform-bullet">
+            <div class="platform-bullet-icon">📈</div>
+            <div>
+              <h4>Suivi des marchés et budgets</h4>
+              <p>Cours de l'énergie, positions d'achat, alertes de dépassement budgétaire — vous gardez le contrôle de votre exposition aux marchés.</p>
+            </div>
+          </div>
+          <div class="platform-bullet">
+            <div class="platform-bullet-icon">🎯</div>
+            <div>
+              <h4>Conformité réglementaire</h4>
+              <p>Avancement du Décret Tertiaire, échéances BACS, calendriers de déclaration OPERAT — votre statut réglementaire en temps réel.</p>
+            </div>
+          </div>
+          <div class="platform-bullet">
+            <div class="platform-bullet-icon">🔔</div>
+            <div>
+              <h4>Détection d'anomalies et alertes</h4>
+              <p>L'intelligence artificielle détecte automatiquement les dérives de consommation et vous alerte avant qu'elles n'impactent vos budgets.</p>
+            </div>
+          </div>
+          <div class="platform-bullet">
+            <div class="platform-bullet-icon">⚡</div>
+            <div>
+              <h4>Optimisation en temps réel</h4>
+              <p>Identification automatique des flexibilités valorisables, fenêtres d'effacement et opportunités d'optimisation selon les prix spot.</p>
+            </div>
+          </div>
+        </div>
+        <div class="platform-screenshot">
+          <img src="assets/images/capture-plateforme.png" alt="Tableau de bord GREENBIRDIE Énergie — consolidation et pilotage énergétique multisite" loading="lazy" onerror="this.style.opacity='0.3'">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ÉTUDES DE CAS ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Études de cas</div>
+    <h2>Des résultats concrets pour des entreprises comme la vôtre</h2>
+    <p class="lead">Chaque mission est différente. Ce qui ne change pas, c'est notre méthode : analyser vos données, construire une stratégie sur mesure, la mettre en œuvre et mesurer les résultats.</p>
+  </div>
+
+  <!-- Placeholder études de cas — à remplacer par de vraies fiches -->
+  <div class="cards-grid">
+    <div class="card">
+      <div class="section-tag section-tag--blue" style="font-size:9px;margin-bottom:8px;">Grande distribution</div>
+      <h3>Regroupement de contrats multisites</h3>
+      <p>Réseau de supermarchés — 80 sites France. Mise en place d'une stratégie d'achat groupé combinant Full Flex et blocs + spot. [À VALIDER PAR GREENBIRDIE — résultats à compléter]</p>
+      <div class="tags">
+        <span class="tag">Achat groupé</span>
+        <span class="tag">Full Flex</span>
+        <span class="tag">80 sites</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-tag" style="font-size:9px;margin-bottom:8px;color:#b8962e;">Logistique</div>
+      <h3>Centrale photovoltaïque sur toiture d'entrepôt</h3>
+      <p>Plateforme logistique — grande toiture sud disponible. Étude de faisabilité, autorisations, maîtrise d'œuvre et valorisation de la production en autoconsommation. [À VALIDER]</p>
+      <div class="tags">
+        <span class="tag">Photovoltaïque</span>
+        <span class="tag">Autoconsommation</span>
+        <span class="tag">Maîtrise d'œuvre</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-tag section-tag--green" style="font-size:9px;margin-bottom:8px;">Industrie</div>
+      <h3>PPA multiacheteurs pour groupement industriel</h3>
+      <p>Groupement de 5 ETI — constitution d'un groupement d'achat pour accéder à un PPA solaire. Structuration juridique, consultation producteurs, analyse des offres. [À VALIDER]</p>
+      <div class="tags">
+        <span class="tag">PPA</span>
+        <span class="tag">Multiacheteurs</span>
+        <span class="tag">ETI</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-40">
+    <a href="references.html" class="btn btn--outline">
+      Voir toutes nos références
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════ VEILLE & PUBLICATIONS ═══════ -->
+<section class="publications-section" aria-label="Veille et publications">
+  <div style="max-width:var(--max-w);margin:0 auto;">
+    <div class="section-tag" style="color:var(--gold);">Veille &amp; Publications</div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:12px;">
+      <h2 style="color:white;max-width:560px;margin:0;">Analyses techniques<br>et décryptages marché</h2>
+      <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link" style="flex-shrink:0;">
+        Toutes les publications
+        <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+      </a>
+    </div>
+
+    <div class="pub-grid">
+      <article class="pub-card">
+        <span class="pub-tag">Marchés de l'énergie</span>
+        <h3>Stratégie d'achat 2026&nbsp;: comment sécuriser vos budgets dans un marché volatil</h3>
+        <p>Les prix de l'énergie restent structurellement instables. Entre tensions géopolitiques, part croissante des renouvelables et mécanismes de capacité en évolution, définir une stratégie d'achat cohérente exige une lecture fine du marché et une adaptation continue du calendrier de couverture.</p>
+        <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link">
+          Lire l'analyse technique
+          <i data-lucide="arrow-up-right" style="width:13px;height:13px;"></i>
+        </a>
+      </article>
+
+      <article class="pub-card">
+        <span class="pub-tag">Réglementation</span>
+        <h3>Décret Tertiaire&nbsp;: les 3 écueils qui exposent les foncières à des sanctions</h3>
+        <p>Périmètre mal délimité, données de consommation non fiabilisées, déclaration OPERAT incomplète : trois erreurs récurrentes que nous observons chez les gestionnaires de portefeuilles tertiaires. Comment les anticiper avant les premières mises en demeure.</p>
+        <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link">
+          Lire l'analyse technique
+          <i data-lucide="arrow-up-right" style="width:13px;height:13px;"></i>
+        </a>
+      </article>
+
+      <article class="pub-card">
+        <span class="pub-tag">PPA &amp; Financement</span>
+        <h3>PPA multiacheteurs&nbsp;: structurer un groupement pour accéder au solaire long terme</h3>
+        <p>Un PPA solaire est inaccessible en dessous de 5 à 10 GWh/an de consommation. Le groupement multiacheteurs permet à des ETI ou des réseaux de franchisés d'atteindre ce seuil. Retour sur la structuration juridique, les points de négociation clés et les risques à anticiper.</p>
+        <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link">
+          Lire l'analyse technique
+          <i data-lucide="arrow-up-right" style="width:13px;height:13px;"></i>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA FINAL ═══════ -->
+<section class="cta-section">
+  <h2>Prêt à prendre le contrôle de votre énergie ?</h2>
+  <p>Un diagnostic de 30 minutes avec un ingénieur GREENBIRDIE suffit souvent à identifier les premiers leviers d'action — sur vos achats, vos consommations ou votre production.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn btn--white btn--lg">
+      Demander un diagnostic gratuit
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="tel:+33144081050" class="btn btn--outline-white">01 44 08 10 50</a>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <a href="/" class="nav-logo">
+        <img src="assets/images/logo-greenbirdie.png" alt="GREENBIRDIE" style="height:32px;margin-bottom:12px;" onerror="this.style.display='none'">
+      </a>
+      <p class="footer-tagline">L'énergie optimiste</p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.35);line-height:1.6;">Cabinet d'ingénierie et de conseil en énergie, indépendant, fondé en 2005.<br>Paris · Bordeaux · Toulouse · Nantes · La Réunion</p>
+    </div>
+    <div class="footer-col">
+      <h4>Expertises</h4>
+      <ul>
+        <li><a href="achat-energie.html">Achat d'énergie</a></li>
+        <li><a href="achat-energie.html#ppa">PPA et VPPA</a></li>
+        <li><a href="flexibilite-performance.html">Performance énergétique</a></li>
+        <li><a href="flexibilite-performance.html#effacement">Effacement et flexibilité</a></li>
+        <li><a href="production-energie.html">Production photovoltaïque</a></li>
+        <li><a href="reglementation.html">Réglementation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Secteurs</h4>
+      <ul>
+        <li><a href="secteurs/grande-distribution.html">Grande distribution</a></li>
+        <li><a href="secteurs/logistique.html">Logistique</a></li>
+        <li><a href="secteurs/hotellerie.html">Hôtellerie</a></li>
+        <li><a href="secteurs/industrie.html">Industrie et ETI</a></li>
+        <li><a href="secteurs/tertiaire.html">Tertiaire</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>GREENBIRDIE</h4>
+      <ul>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="references.html">Références</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mailto:info@greenbirdie.com">info@greenbirdie.com</a></li>
+        <li><a href="tel:+33144081050">01 44 08 10 50</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 GREENBIRDIE EURL — Expert en transition énergétique depuis 2005 — Paris 14e</p>
+    <div class="footer-legal">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="mentions-legales.html#confidentialite">Confidentialité</a>
+      <a href="mentions-legales.html#cookies">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Lucide icons
+  lucide.createIcons();
+</script>
+</body>
+</html>

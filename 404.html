@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable — GREENBIRDIE</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .error-page {
+      min-height: calc(100vh - var(--nav-h));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 40px;
+      background: var(--cream);
+    }
+    .error-inner { max-width: 560px; }
+    .error-code {
+      font-family: var(--font-serif);
+      font-size: clamp(5rem, 15vw, 9rem);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 16px;
+      opacity: 0.08;
+    }
+    .error-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--dark);
+      margin-bottom: 16px;
+      margin-top: -40px;
+    }
+    .error-sub {
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .error-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .error-sitemap {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      text-align: left;
+    }
+    .error-sitemap a {
+      font-size: 13px;
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .error-sitemap a:hover { color: var(--dark); }
+    .error-sitemap a::before { content: '→'; color: var(--gold); }
+    @media (max-width: 600px) {
+      .error-sitemap { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo-greenbirdie.png" alt="GREENBIRDIE" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:#1a1a1a;">GREENBIRDIE</span>
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="achat-energie.html" class="nav-link">Acheter l'énergie</a></li>
+      <li class="nav-item"><a href="flexibilite-performance.html" class="nav-link">Consommer au bon moment</a></li>
+      <li class="nav-item"><a href="production-energie.html" class="nav-link">Produire son énergie</a></li>
+      <li class="nav-item"><a href="reglementation.html" class="nav-link">Réglementation</a></li>
+      <li class="nav-item"><a href="a-propos.html" class="nav-link">GREENBIRDIE</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Parler à un expert <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile-overlay">
+  <ul>
+    <li><a href="achat-energie.html">Acheter l'énergie</a></li>
+    <li><a href="flexibilite-performance.html">Consommer au bon moment</a></li>
+    <li><a href="production-energie.html">Produire son énergie</a></li>
+    <li><a href="reglementation.html">Réglementation</a></li>
+    <li><a href="a-propos.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="error-page">
+  <div class="error-inner">
+    <div class="error-code" aria-hidden="true">404</div>
+    <h1 class="error-title">Cette page est introuvable.</h1>
+    <p class="error-sub">La page que vous cherchez n'existe pas ou a été déplacée. Utilisez la navigation ci-dessous pour retrouver ce dont vous avez besoin.</p>
+
+    <div class="error-links">
+      <a href="index.html" class="btn btn--primary">Retour à l'accueil</a>
+      <a href="contact.html" class="btn btn--outline">Contacter un expert</a>
+    </div>
+
+    <div>
+      <p style="font-size:13px;color:var(--text-light);text-align:center;margin-bottom:20px;">Ou accédez directement à :</p>
+      <div class="error-sitemap">
+        <a href="achat-energie.html">Achat d'énergie</a>
+        <a href="flexibilite-performance.html">Flexibilité</a>
+        <a href="production-energie.html">Production solaire</a>
+        <a href="reglementation.html">Réglementation</a>
+        <a href="secteurs/grande-distribution.html">Grande distribution</a>
+        <a href="secteurs/logistique.html">Logistique</a>
+        <a href="secteurs/hotellerie.html">Hôtellerie</a>
+        <a href="secteurs/industrie.html">Industrie</a>
+        <a href="secteurs/tertiaire.html">Tertiaire</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="references.html">Références</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
