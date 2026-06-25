@@ -91,6 +91,8 @@
           <a href="${b}secteurs/tertiaire.html">Tertiaire et immobilier</a>
           <a href="${b}secteurs/sante.html">Santé</a>
           <a href="${b}secteurs/transports.html">Transports</a>
+          <div class="nav-dropdown-section">Habitat</div>
+          <a href="${b}secteurs/coproprietes.html">Copropriétés</a>
         </div>
       </li>
 
@@ -125,6 +127,7 @@
     <li><a href="${b}secteurs/tertiaire.html">Tertiaire</a></li>
     <li><a href="${b}secteurs/sante.html">Santé</a></li>
     <li><a href="${b}secteurs/transports.html">Transports</a></li>
+    <li><a href="${b}secteurs/coproprietes.html">Copropriétés</a></li>
     <div class="nav-mobile-section">GREENBIRDIE</div>
     <li><a href="${b}a-propos.html">À propos</a></li>
     <li><a href="${b}contact.html">Contact</a></li>
