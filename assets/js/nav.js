@@ -7,7 +7,8 @@
   // Fonctionne aussi bien en file:// qu'en HTTP (GitHub Pages, Netlify)
   const href = window.location.href;
   const inSecteurs = /[/\\]secteurs[/\\]/.test(href);
-  const b = inSecteurs ? '../' : '';   // préfixe pour les liens
+  const inBlog = /[/\\]blog[/\\]/.test(href);
+  const b = (inSecteurs || inBlog) ? '../' : '';   // préfixe pour les liens
 
   // ── Template du menu ───────────────────────────────────────────────────
   const navHTML = `
@@ -100,6 +101,10 @@
         <a href="${b}a-propos.html" class="nav-link">À propos</a>
       </li>
 
+      <li class="nav-item">
+        <a href="${b}blog/index.html" class="nav-link">Blog</a>
+      </li>
+
     </ul>
 
     <button class="nav-search" aria-label="Rechercher" title="Rechercher (Ctrl+K)">
@@ -135,6 +140,8 @@
     <div class="nav-mobile-section">À propos</div>
     <li><a href="${b}a-propos.html">À propos</a></li>
     <li><a href="${b}contact.html">Contact</a></li>
+    <div class="nav-mobile-section">Blog</div>
+    <li><a href="${b}blog/index.html">Tous les articles</a></li>
   </ul>
 </div>`;
 
@@ -168,7 +175,11 @@
     { t: 'Tertiaire et immobilier de bureau', u: b+'secteurs/tertiaire.html', d: 'Bureaux et immobilier : Décret Tertiaire, BACS, GTB, audit.', k: 'tertiaire bureaux immobilier Décret Tertiaire BACS GTB audit performance CSRD' },
     { t: 'Santé — Hôpitaux et établissements de soins', u: b+'secteurs/sante.html', d: 'Achat 24h/24, Décret Tertiaire, BACS, solaire, stockage.', k: 'santé hôpital clinique EHPAD énergie Décret Tertiaire BACS solaire stockage' },
     { t: 'Transports — Bus électriques et IRVE', u: b+'secteurs/transports.html', d: 'Bus électriques, IRVE, smart charging, ferroviaire, solaire sur dépôts.', k: 'transports bus électrique IRVE ferroviaire smart charging mobilité dépôt' },
-    { t: 'Copropriétés — DTG, PPT, MOE et AMO rénovation', u: b+'secteurs/coproprietes.html', d: 'Diagnostic Technique Global, Plan Pluriannuel de Travaux, AMO ANAH, MaPrimeRénov\'.', k: 'copropriété DTG PPT MOE AMO rénovation ANAH APC MaPrimeRénov syndicat travaux' }
+    { t: 'Copropriétés — DTG, PPT, MOE et AMO rénovation', u: b+'secteurs/coproprietes.html', d: 'Diagnostic Technique Global, Plan Pluriannuel de Travaux, AMO ANAH, MaPrimeRénov\'.', k: 'copropriété DTG PPT MOE AMO rénovation ANAH APC MaPrimeRénov syndicat travaux' },
+    { t: 'Blog — Décryptages & Insights', u: b+'blog/index.html', d: 'Analyses réglementaires et retours terrain par les experts GREENBIRDIE.', k: 'blog articles actualités énergie réglementation marché analyse insight' },
+    { t: 'Prix négatifs : qui paie quand le nucléaire ne s\'arrête pas ?', u: b+'blog/prix-negatifs-nucleaire.html', d: 'Analyse des compensations RTE–EDF (CRE 2026-67) et leur impact sur le TURPE lors des prix spot négatifs.', k: 'prix négatifs spot nucléaire EDF RTE TURPE compensation flexibilité renouvelables CRE' },
+    { t: 'Loi APER : cinq lectures réglementaires, quatre fois plus d\'arbres', u: b+'blog/aper-ombrage-cinq-lectures.html', d: 'Un même parking de 1 500 places, cinq méthodes : de 90 à 350 arbres requis. Analyse des divergences d\'interprétation de la loi APER sur l\'obligation d\'ombrage.', k: 'loi APER ombrière photovoltaïque parking arbres PLU urbanisme ombrage stationnement réglementation' },
+    { t: 'Flexibilité implicite, flexibilité explicite : deux logiques à distinguer', u: b+'blog/flexibilite-implicite-explicite.html', d: 'Derrière le mot flexibilité se cachent deux réalités : l\'une optimise la facture, l\'autre génère des revenus. Guide pour piloter chaque levier dans le bon cadre.', k: 'flexibilité implicite explicite effacement mécanisme capacité RTE agrégateur PPA pilotage énergie audit' }
   ];
 
   function gbSearch(q) {
