@@ -504,6 +504,31 @@ p:last-child { margin-bottom: 0; }
   background: var(--white);
   border-bottom: 1px solid var(--border);
   padding: 20px var(--section-h);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.refs-strip-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.refs-strip-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.ref-logo-text {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .refs-strip-inner {
@@ -849,7 +874,9 @@ p:last-child { margin-bottom: 0; }
   padding: 52px;
   position: relative;
   overflow: hidden;
+  color: var(--white);
 }
+.offer-box h3 { color: var(--white); }
 
 .offer-box::before {
   content: '';
