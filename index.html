@@ -8,12 +8,17 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.greenbirdie.com/">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Conseil en énergie pour entreprises — GREENBIRDIE">
-  <meta property="og:description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable.">
-  <meta property="og:url" content="https://www.greenbirdie.com/">
+  <!-- Open Graph & Twitter Card -->
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.greenbirdie.com/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://www.greenbirdie.com/">
+  <meta property="og:title" content="Conseil en énergie pour entreprises — GREENBIRDIE">
+  <meta property="og:description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable. +6 000 sites accompagnés en France. Expert depuis 2005.">
+  <meta property="og:image" content="https://www.greenbirdie.com/assets/images/og-greenbirdie.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="GREENBIRDIE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conseil en énergie pour entreprises — GREENBIRDIE">
+  <meta name="twitter:description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable. +6 000 sites accompagnés en France. Expert depuis 2005.">
 
   <!-- Fonts — Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,6 +68,25 @@
     "url": "https://www.greenbirdie.com",
     "areaServed": "France",
     "slogan": "L'énergie optimiste"
+  }
+  </script>
+
+  <!-- WebSite schema — active le Search Box dans Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.greenbirdie.com/",
+    "name": "GREENBIRDIE",
+    "description": "Cabinet d'ingénierie et de conseil en stratégie énergétique",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.greenbirdie.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 </head>
