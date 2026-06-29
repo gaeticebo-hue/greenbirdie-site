@@ -156,7 +156,9 @@ function handleSubmit(e, formId) {
       form.style.opacity = '0.4';
       form.style.pointerEvents = 'none';
       const success = document.getElementById(successId);
-      if (success) success.classList.add('show');
+      if (success) {
+        success.style.display = 'block';
+      }
     })
     .catch(() => {
       btn.disabled = false;
