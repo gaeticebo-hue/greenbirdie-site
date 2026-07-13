@@ -1,26 +1,60 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Décryptages énergie et réglementation — GREENBIRDIE</title>
-  <meta name="description" content="Analyses, actualités réglementaires et retours d'expérience par les experts GREENBIRDIE : Décret Tertiaire, DADDUE 2, PPA, photovoltaïque, marchés de l'énergie.">
+  <meta name="description" content="Analyses, actualités réglementaires et retours d'expérience par les experts GREENBIRDIE : Décret Tertiaire, PPE3, PPA, photovoltaïque, marchés de l'énergie, décarbonation.">
   <link rel="canonical" href="https://www.greenbirdie.com/blog/">
-  <!-- Open Graph & Twitter Card -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.greenbirdie.com/blog/">
   <meta property="og:title" content="Blog — Décryptages énergie et réglementation — GREENBIRDIE">
-  <meta property="og:description" content="Analyses, actualités réglementaires et retours d'expérience par les experts GREENBIRDIE : Décret Tertiaire, DADDUE 2, PPA, photovoltaïque, marchés de l'énergie.">
+  <meta property="og:description" content="Analyses, actualités réglementaires et retours d'expérience par les experts GREENBIRDIE : Décret Tertiaire, PPE3, PPA, photovoltaïque, marchés de l'énergie, décarbonation.">
   <meta property="og:image" content="https://www.greenbirdie.com/assets/images/og-greenbirdie.png">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="GREENBIRDIE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog — Décryptages énergie et réglementation — GREENBIRDIE">
-  <meta name="twitter:description" content="Analyses, actualités réglementaires et retours d'expérience par les experts GREENBIRDIE : Décret Tertiaire, DADDUE 2, PPA, photovoltaïque, marchés de l'énergie.">
+  <meta name="twitter:description" content="Analyses, actualités réglementaires et retours d'expérience par les experts GREENBIRDIE.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    .blog-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 8px 18px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: inherit;
+      font-weight: 500;
+      color: var(--text-light);
+      transition: all 0.2s;
+    }
+    .filter-btn:hover {
+      border-color: var(--dark-green);
+      color: var(--dark-green);
+    }
+    .filter-btn.active {
+      background: var(--dark-green);
+      color: white;
+      border-color: var(--dark-green);
+    }
+    .blog-card[hidden] { display: none !important; }
+    .blog-count {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+  </style>
 </head>
 <body>
 
@@ -30,6 +64,7 @@
   <div class="hero-inner">
     <nav class="breadcrumb">
       <a href="../index.html">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
       <span>Blog</span>
     </nav>
     <div class="hero-eyebrow">Décryptages &amp; Insights</div>
@@ -38,17 +73,186 @@
   </div>
 </header>
 
-<!-- ARTICLES -->
 <section class="section">
   <div class="section-header">
     <div class="section-tag">Tous les articles</div>
-    <h2>Nos dernières publications</h2>
+    <h2>Nos publications</h2>
   </div>
 
-  <div class="blog-grid">
+  <!-- FILTRES -->
+  <div class="blog-filters" role="group" aria-label="Filtrer par catégorie">
+    <button class="filter-btn active" data-filter="tous">Tous les articles</button>
+    <button class="filter-btn" data-filter="marches">Marchés de l'énergie</button>
+    <button class="filter-btn" data-filter="reglementation">Réglementation</button>
+    <button class="filter-btn" data-filter="flexibilite">Flexibilité</button>
+    <button class="filter-btn" data-filter="photovoltaique">Photovoltaïque</button>
+    <button class="filter-btn" data-filter="environnement">Environnement</button>
+    <button class="filter-btn" data-filter="performance">Performance</button>
+    <button class="filter-btn" data-filter="actualites">Actualités</button>
+  </div>
 
-    <!-- Article 1 -->
-    <a href="flexibilite-implicite-explicite.html" class="blog-card">
+  <p class="blog-count" id="blog-count">10 articles</p>
+
+  <div class="blog-grid" id="blog-grid">
+
+    <!-- PPE3 -->
+    <a href="ppe3-strategie-energetique.html" class="blog-card" data-cat="marches">
+      <div class="blog-card-img">
+        <img src="../assets/images/article_ppe3_1.jpg" alt="PPE3 stratégie énergétique mondiale">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">Marchés de l'énergie</span>
+          <time datetime="2026-02-20">20 février 2026</time>
+          <span>10 min de lecture</span>
+        </div>
+        <h3>PPE3 : ce que la Chine, les États-Unis et la Russie nous apprennent sur notre stratégie énergétique</h3>
+        <p class="blog-card-excerpt">La PPE3 publiée au JO le 12 février 2026 fixe le cap de la France jusqu'en 2035. Mais pour la comprendre vraiment, il faut sortir de France. 1 GW nucléaire = 6 GW solaire : le chiffre qui devrait structurer tous les débats.</p>
+        <div class="article-tags">
+          <span class="tag">PPE3</span>
+          <span class="tag">Nucléaire</span>
+          <span class="tag">Renouvelables</span>
+          <span class="tag">Stratégie</span>
+        </div>
+      </div>
+      <div class="blog-card-footer">
+        Lire l'article
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- Décarbonation Hinojosa -->
+    <a href="decarbonation-hinojosa.html" class="blog-card" data-cat="environnement">
+      <div class="blog-card-img">
+        <img src="../assets/images/article_decarbo_1.jpg" alt="Décarbonation industrielle Hinojosa">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">Environnement</span>
+          <time datetime="2025-12-15">15 décembre 2025</time>
+          <span>5 min de lecture</span>
+        </div>
+        <h3>Accélérer la décarbonation industrielle : du diagnostic à l'action chez Hinojosa France</h3>
+        <p class="blog-card-excerpt">–40 % d'émissions directes par tonne produite en trois ans. Le cas Hinojosa Packaging illustre comment passer du plan carbone aux projets techniques concrets : mesurer, prioriser, agir.</p>
+        <div class="article-tags">
+          <span class="tag">Décarbonation</span>
+          <span class="tag">Industrie</span>
+          <span class="tag">Audit énergétique</span>
+          <span class="tag">Gaz</span>
+        </div>
+      </div>
+      <div class="blog-card-footer">
+        Lire l'article
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- CPE -->
+    <a href="cpe-situation-reference.html" class="blog-card" data-cat="performance">
+      <div class="blog-card-img">
+        <img src="../assets/images/article_cpe_1.jpg" alt="CPE situation de référence IPMVP">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">Performance énergétique</span>
+          <time datetime="2025-11-10">10 novembre 2025</time>
+          <span>8 min de lecture</span>
+        </div>
+        <h3>CPE : sécuriser la situation de référence avant de garantir les économies</h3>
+        <p class="blog-card-excerpt">Dans un Contrat de Performance Énergétique, les économies ne sont jamais absolues — elles se mesurent par rapport à une baseline. Si celle-ci est fragile, tout le contrat est contestable. Analyse méthodologique.</p>
+        <div class="article-tags">
+          <span class="tag">CPE</span>
+          <span class="tag">IPMVP</span>
+          <span class="tag">Sous-comptage</span>
+          <span class="tag">Performance</span>
+        </div>
+      </div>
+      <div class="blog-card-footer">
+        Lire l'article
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- Eulalie ombrières -->
+    <a href="ombrieres-eulalie.html" class="blog-card" data-cat="photovoltaique">
+      <div class="blog-card-img">
+        <img src="../assets/images/article_eulalie_1.jpg" alt="Ombrières photovoltaïques parking 423 kWc">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">Photovoltaïque</span>
+          <time datetime="2026-01-20">20 janvier 2026</time>
+          <span>4 min de lecture</span>
+        </div>
+        <h3>Ombrières photovoltaïques : un projet de 423 kWc au service d'une vision globale</h3>
+        <p class="blog-card-excerpt">Au-delà des 423 kWc installés, ce projet illustre le passage d'une logique site par site à la gestion d'un portefeuille énergétique. Les ombrières parking : un actif stratégique encore sous-estimé.</p>
+        <div class="article-tags">
+          <span class="tag">Ombrières</span>
+          <span class="tag">Autoconsommation</span>
+          <span class="tag">EPC</span>
+          <span class="tag">Retail</span>
+        </div>
+      </div>
+      <div class="blog-card-footer">
+        Lire l'article
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- DT autoconsommation -->
+    <a href="decret-tertiaire-autoconsommation.html" class="blog-card" data-cat="reglementation">
+      <div class="blog-card-img">
+        <img src="../assets/images/article_dtauto_1.jpg" alt="Décret Tertiaire et autoconsommation">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">Réglementation</span>
+          <time datetime="2026-03-15">15 mars 2026</time>
+          <span>6 min de lecture</span>
+        </div>
+        <h3>Autoconsommation et décret tertiaire : une fausse bonne idée de l'exclure ?</h3>
+        <p class="blog-card-excerpt">La DGEC s'interroge sur l'intégration de l'autoconsommation dans les objectifs du Décret Tertiaire. Sur le papier, la distinction est claire. Dans la réalité, beaucoup moins. Analyse d'un débat révélateur.</p>
+        <div class="article-tags">
+          <span class="tag">Décret Tertiaire</span>
+          <span class="tag">Autoconsommation</span>
+          <span class="tag">OPERAT</span>
+          <span class="tag">Photovoltaïque</span>
+        </div>
+      </div>
+      <div class="blog-card-footer">
+        Lire l'article
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- Printemps de la Planète -->
+    <a href="printemps-planete.html" class="blog-card" data-cat="environnement">
+      <div class="blog-card-img">
+        <img src="../assets/images/article_printemps_1.jpg" alt="Printemps de la Planète transition écologique">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">Environnement</span>
+          <time datetime="2026-04-20">20 avril 2026</time>
+          <span>5 min de lecture</span>
+        </div>
+        <h3>Printemps de la Planète : ce que révèle vraiment la transition écologique</h3>
+        <p class="blog-card-excerpt">Le 15 avril 2026 à Boulogne-Billancourt, industriels, énergéticiens, financiers et experts du numérique autour de la même table. La transition est engagée — mais elle avance de manière désynchronisée selon les secteurs.</p>
+        <div class="article-tags">
+          <span class="tag">Transition énergétique</span>
+          <span class="tag">Électrification</span>
+          <span class="tag">Mobilité</span>
+          <span class="tag">Bâtiment</span>
+        </div>
+      </div>
+      <div class="blog-card-footer">
+        Lire l'article
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- Flexibilité implicite/explicite -->
+    <a href="flexibilite-implicite-explicite.html" class="blog-card" data-cat="flexibilite">
       <div class="blog-card-img">
         <img src="../assets/images/article-flexibilite.png" alt="Flexibilité énergétique — implicite et explicite">
       </div>
@@ -73,8 +277,8 @@
       </div>
     </a>
 
-    <!-- Article 2 -->
-    <a href="aper-ombrage-cinq-lectures.html" class="blog-card">
+    <!-- APER ombrières -->
+    <a href="aper-ombrage-cinq-lectures.html" class="blog-card" data-cat="reglementation">
       <div class="blog-card-img">
         <img src="../assets/images/article-loi-aper.jpg" alt="Loi APER — ombrage et arbres parking">
       </div>
@@ -99,8 +303,8 @@
       </div>
     </a>
 
-    <!-- Article 3 -->
-    <a href="prix-negatifs-nucleaire.html" class="blog-card">
+    <!-- Prix négatifs nucléaire -->
+    <a href="prix-negatifs-nucleaire.html" class="blog-card" data-cat="marches">
       <div class="blog-card-img">
         <img src="../assets/images/article-nucleaire-spot-negatif.jpg" alt="Prix spot négatifs et nucléaire">
       </div>
@@ -111,12 +315,37 @@
           <span>5 min de lecture</span>
         </div>
         <h3>Prix négatifs : qui paie quand le nucléaire ne s'arrête pas ?</h3>
-        <p class="blog-card-excerpt">Depuis plusieurs semaines, les épisodes de prix spot négatifs se multiplient en France. Le récit dominant pointe les renouvelables. Il est incomplet. Analyse de l'accord RTE–EDF approuvé par la CRE et de son impact sur le TURPE.</p>
+        <p class="blog-card-excerpt">Depuis plusieurs semaines, les épisodes de prix spot négatifs se multiplient en France. Le récit dominant pointe les renouvelables. Il est incomplet. Analyse de l'accord RTE–EDF approuvé par la CRE.</p>
         <div class="article-tags">
           <span class="tag">Prix spot</span>
           <span class="tag">Nucléaire</span>
           <span class="tag">TURPE</span>
           <span class="tag">Flexibilité</span>
+        </div>
+      </div>
+      <div class="blog-card-footer">
+        Lire l'article
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- Nantes bureaux -->
+    <a href="bureaux-nantes.html" class="blog-card" data-cat="actualites">
+      <div class="blog-card-img">
+        <img src="../assets/images/article_nantes_1.jpg" alt="Nouveaux bureaux GREENBIRDIE Nantes">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">Actualités</span>
+          <time datetime="2026-05-10">10 mai 2026</time>
+          <span>3 min de lecture</span>
+        </div>
+        <h3>GREENBIRDIE Nantes : de nouveaux bureaux pour accompagner notre développement</h3>
+        <p class="blog-card-excerpt">L'agence nantaise de GREENBIRDIE s'installe dans de nouveaux locaux en duplex, plus spacieux et mieux adaptés à l'évolution de nos équipes. Un espace pensé pour le confort et les échanges.</p>
+        <div class="article-tags">
+          <span class="tag">Nantes</span>
+          <span class="tag">GREENBIRDIE</span>
+          <span class="tag">Agence</span>
         </div>
       </div>
       <div class="blog-card-footer">
@@ -139,7 +368,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-col">
-      <p style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:white;margin-bottom:8px;">GREENBIRDIE</p>
+      <p style="font-family:'Inter',sans-serif;font-size:18px;font-weight:700;color:white;margin-bottom:8px;">GREENBIRDIE</p>
       <p class="footer-tagline">L'énergie optimiste</p>
     </div>
     <div class="footer-col">
@@ -180,5 +409,36 @@
 
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>
+  (function () {
+    var btns = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.blog-card');
+    var count = document.getElementById('blog-count');
+
+    function updateCount(visible) {
+      count.textContent = visible + ' article' + (visible > 1 ? 's' : '');
+    }
+
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.dataset.filter;
+        var visible = 0;
+        cards.forEach(function (card) {
+          if (filter === 'tous' || card.dataset.cat === filter) {
+            card.hidden = false;
+            visible++;
+          } else {
+            card.hidden = true;
+          }
+        });
+        updateCount(visible);
+      });
+    });
+
+    updateCount(cards.length);
+  })();
+</script>
 </body>
 </html>
