@@ -76,7 +76,21 @@
       </li>
 
       <li class="nav-item">
-        <a href="${b}reglementation.html" class="nav-link">Réglementation</a>
+        <a href="${b}reglementation.html" class="nav-link">
+          Réglementation
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-section">Efficacité et performance</div>
+          <a href="${b}reglementation.html#decret-tertiaire">Décret Tertiaire (OPERAT)</a>
+          <a href="${b}reglementation.html#bacs">Décret BACS et GTB</a>
+          <a href="${b}reglementation.html#audit-obligatoire">Audit énergétique obligatoire</a>
+          <div class="nav-dropdown-section">Production et mobilité</div>
+          <a href="${b}reglementation.html#aper">Loi APER — ombrières solaires</a>
+          <a href="${b}reglementation.html#lom">Loi LOM — IRVE et bornes</a>
+          <div class="nav-dropdown-section">Reporting</div>
+          <a href="${b}reglementation.html#csrd">CSRD et reporting RSE</a>
+        </div>
       </li>
 
       <li class="nav-item">
@@ -131,6 +145,10 @@
     <li><a href="${b}flexibilite-performance.html">Consommer au bon moment</a></li>
     <li><a href="${b}production-energie.html">Produire son énergie</a></li>
     <li><a href="${b}reglementation.html">Réglementation</a></li>
+    <li><a href="${b}reglementation.html#decret-tertiaire">— Décret Tertiaire</a></li>
+    <li><a href="${b}reglementation.html#aper">— Loi APER</a></li>
+    <li><a href="${b}reglementation.html#lom">— Loi LOM / IRVE</a></li>
+    <li><a href="${b}reglementation.html#csrd">— CSRD</a></li>
     <div class="nav-mobile-section">Secteurs</div>
     <li><a href="${b}secteurs/grande-distribution.html">Grande distribution</a></li>
     <li><a href="${b}secteurs/logistique.html">Logistique</a></li>
