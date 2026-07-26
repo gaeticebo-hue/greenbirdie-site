@@ -33,6 +33,8 @@
           <a href="${b}achat-energie.html#contrats-groupes">Contrats groupes</a>
           <a href="${b}achat-energie.html#ppa">PPA et PPA multiacheteurs</a>
           <a href="${b}achat-energie.html#vppa">VPPA et couverture financière</a>
+          <div class="nav-dropdown-section">Secteur public</div>
+          <a href="${b}cader-publics.html">CADER publics et PPA multi-acheteurs</a>
           <div class="nav-dropdown-section">Opérationnel</div>
           <a href="${b}achat-energie.html#consultation">Consultation fournisseurs</a>
           <a href="${b}achat-energie.html#suivi">Suivi des marchés et budgets</a>
@@ -125,6 +127,7 @@
 <div class="nav-mobile-overlay" role="dialog" aria-label="Menu mobile">
   <ul>
     <li><a href="${b}achat-energie.html">Acheter l'énergie</a></li>
+    <li><a href="${b}cader-publics.html">CADER publics et PPA multi-acheteurs</a></li>
     <li><a href="${b}flexibilite-performance.html">Consommer au bon moment</a></li>
     <li><a href="${b}production-energie.html">Produire son énergie</a></li>
     <li><a href="${b}reglementation.html">Réglementation</a></li>
@@ -158,6 +161,7 @@
   var IDX = [
     { t: 'Accueil — GREENBIRDIE', u: b+'index.html', d: 'Conseil en énergie indépendant depuis 2005. Achat d\'énergie, performance, photovoltaïque, réglementation.', k: 'énergie conseil achat PPA photovoltaïque réglementation TWh GWc' },
     { t: 'Acheter l\'énergie', u: b+'achat-energie.html', d: 'Stratégie d\'achat, PPA, contrats groupés, consultation fournisseurs.', k: 'achat énergie électricité gaz PPA fournisseur spot couverture contrat groupe VPPA' },
+    { t: 'CADER publics et PPA multi-acheteurs', u: b+'cader-publics.html', d: 'AMO pour collectivités, établissements publics et groupements de commande. Structuration de CADER publics et PPA multiacheteurs.', k: 'CADER public collectivité AMO groupement commande PPA multiacheteurs EPCI commande publique ENR renouvelable' },
     { t: 'Flexibilité et performance énergétique', u: b+'flexibilite-performance.html', d: 'Audit énergétique, Décret Tertiaire OPERAT, BACS, effacement, stockage, carbone.', k: 'audit Décret Tertiaire OPERAT BACS GTB effacement stockage carbone DADDUE' },
     { t: 'Marchés de flexibilité — Effacement et capacité RTE', u: b+'flexibilite-performance.html#marches', d: 'Mécanisme de capacité, marchés d\'ajustement, effacement diffus, optimisation prix spot.', k: 'effacement capacité RTE ajustement spot agrégateur flexibilité mécanisme' },
     { t: 'Diagnostics BPI — Décarbon\'Action, Éco-Flux, Perf Immo', u: b+'flexibilite-performance.html#diags-bpi', d: 'Diagnostics financés BPI France pour PME et ETI. GREENBIRDIE prestataire agréé.', k: 'BPI diag décarbon éco flux perf immo PME ETI bilan carbone financement' },
