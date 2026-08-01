@@ -76,21 +76,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="${b}reglementation.html" class="nav-link">
-          Réglementation
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </a>
-        <div class="nav-dropdown">
-          <div class="nav-dropdown-section">Efficacité et performance</div>
-          <a href="${b}reglementation.html#decret-tertiaire">Décret Tertiaire (OPERAT)</a>
-          <a href="${b}reglementation.html#bacs">Décret BACS et GTB</a>
-          <a href="${b}reglementation.html#audit-obligatoire">Audit énergétique obligatoire</a>
-          <div class="nav-dropdown-section">Production et mobilité</div>
-          <a href="${b}reglementation.html#aper">Loi APER — ombrières solaires</a>
-          <a href="${b}reglementation.html#lom">Loi LOM — IRVE et bornes</a>
-          <div class="nav-dropdown-section">Reporting</div>
-          <a href="${b}reglementation.html#csrd">CSRD et reporting RSE</a>
-        </div>
+        <a href="${b}notre-approche.html" class="nav-link">Notre approche</a>
       </li>
 
       <li class="nav-item">
@@ -118,7 +104,15 @@
       </li>
 
       <li class="nav-item">
-        <a href="${b}blog/index.html" class="nav-link">Blog</a>
+        <a href="${b}blog/index.html" class="nav-link">
+          Ressources
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-section">Contenus</div>
+          <a href="${b}blog/index.html">Articles et analyses</a>
+          <a href="${b}reglementation.html">Réglementation énergétique</a>
+        </div>
       </li>
 
     </ul>
@@ -144,11 +138,7 @@
     <li><a href="${b}cader-publics.html">CADER publics et PPA multi-acheteurs</a></li>
     <li><a href="${b}flexibilite-performance.html">Consommer au bon moment</a></li>
     <li><a href="${b}production-energie.html">Produire son énergie</a></li>
-    <li><a href="${b}reglementation.html">Réglementation</a></li>
-    <li><a href="${b}reglementation.html#decret-tertiaire">— Décret Tertiaire</a></li>
-    <li><a href="${b}reglementation.html#aper">— Loi APER</a></li>
-    <li><a href="${b}reglementation.html#lom">— Loi LOM / IRVE</a></li>
-    <li><a href="${b}reglementation.html#csrd">— CSRD</a></li>
+    <li><a href="${b}notre-approche.html">Notre approche</a></li>
     <div class="nav-mobile-section">Secteurs</div>
     <li><a href="${b}secteurs/grande-distribution.html">Grande distribution</a></li>
     <li><a href="${b}secteurs/logistique.html">Logistique</a></li>
@@ -161,8 +151,9 @@
     <div class="nav-mobile-section">À propos</div>
     <li><a href="${b}a-propos.html">À propos</a></li>
     <li><a href="${b}contact.html">Contact</a></li>
-    <div class="nav-mobile-section">Blog</div>
-    <li><a href="${b}blog/index.html">Tous les articles</a></li>
+    <div class="nav-mobile-section">Ressources</div>
+    <li><a href="${b}blog/index.html">Articles et analyses</a></li>
+    <li><a href="${b}reglementation.html">Réglementation énergétique</a></li>
   </ul>
 </div>`;
 
@@ -184,6 +175,7 @@
     { t: 'Marchés de flexibilité — Effacement et capacité RTE', u: b+'flexibilite-performance.html#marches', d: 'Mécanisme de capacité, marchés d\'ajustement, effacement diffus, optimisation prix spot.', k: 'effacement capacité RTE ajustement spot agrégateur flexibilité mécanisme' },
     { t: 'Diagnostics BPI — Décarbon\'Action, Éco-Flux, Perf Immo', u: b+'flexibilite-performance.html#diags-bpi', d: 'Diagnostics financés BPI France pour PME et ETI. GREENBIRDIE prestataire agréé.', k: 'BPI diag décarbon éco flux perf immo PME ETI bilan carbone financement' },
     { t: 'Produire son énergie — Photovoltaïque', u: b+'production-energie.html', d: 'Centrale PV en toiture, ombrières de parking, centrales au sol, autoconsommation.', k: 'photovoltaïque solaire toiture ombrière centrale autoconsommation maîtrise œuvre GWc' },
+    { t: 'Notre approche — Méthode et accompagnement énergétique', u: b+'notre-approche.html', d: 'Du diagnostic au pilotage continu : comment GREENBIRDIE accompagne votre stratégie énergétique de l\'analyse jusqu\'à la mise en œuvre.', k: 'notre approche diagnostic stratégie ingénierie mise en œuvre pilotage direction énergie externalisée méthode' },
     { t: 'Réglementation énergétique', u: b+'reglementation.html', d: 'Décret Tertiaire, BACS, audits obligatoires DADDUE 2, loi APER, loi LOM, CSRD.', k: 'Décret Tertiaire BACS APER LOM CSRD DADDUE audit réglementation obligation' },
     { t: 'Loi LOM — IRVE et bornes de recharge', u: b+'reglementation.html#lom', d: 'Obligations IRVE pour parkings : véhicules légers et poids lourds (MCS).', k: 'IRVE LOM bornes recharge véhicule électrique parking poids lourd MCS smart charging' },
     { t: 'Audit énergétique obligatoire DADDUE 2', u: b+'reglementation.html#audit-obligatoire', d: 'Seuils 2,75–23,6 GWh (audit) et ≥23,6 GWh (SMÉ). Qualifications OPQIBI 1717 et 1905.', k: 'audit DADDUE GWh seuil SMÉ NF EN 16247 OPQIBI 1717 1905 obligatoire' },
@@ -198,7 +190,7 @@
     { t: 'Santé — Hôpitaux et établissements de soins', u: b+'secteurs/sante.html', d: 'Achat 24h/24, Décret Tertiaire, BACS, solaire, stockage.', k: 'santé hôpital clinique EHPAD énergie Décret Tertiaire BACS solaire stockage' },
     { t: 'Transports — Bus électriques et IRVE', u: b+'secteurs/transports.html', d: 'Bus électriques, IRVE, smart charging, ferroviaire, solaire sur dépôts.', k: 'transports bus électrique IRVE ferroviaire smart charging mobilité dépôt' },
     { t: 'Copropriétés — DTG, PPT, MOE et AMO rénovation', u: b+'secteurs/coproprietes.html', d: 'Diagnostic Technique Global, Plan Pluriannuel de Travaux, AMO ANAH, MaPrimeRénov\'.', k: 'copropriété DTG PPT MOE AMO rénovation ANAH APC MaPrimeRénov syndicat travaux' },
-    { t: 'Blog — Décryptages & Insights', u: b+'blog/index.html', d: 'Analyses réglementaires et retours terrain par les experts GREENBIRDIE.', k: 'blog articles actualités énergie réglementation marché analyse insight' },
+    { t: 'Ressources — Articles et analyses', u: b+'blog/index.html', d: 'Articles, analyses et retours d\'expérience par les experts GREENBIRDIE : marchés de l\'énergie, PPA, flexibilité, photovoltaïque, décarbonation.', k: 'ressources articles analyses blog énergie réglementation marché PPA flexibilité photovoltaïque insight' },
     { t: 'Prix négatifs : qui paie quand le nucléaire ne s\'arrête pas ?', u: b+'blog/prix-negatifs-nucleaire.html', d: 'Analyse des compensations RTE–EDF (CRE 2026-67) et leur impact sur le TURPE lors des prix spot négatifs.', k: 'prix négatifs spot nucléaire EDF RTE TURPE compensation flexibilité renouvelables CRE' },
     { t: 'Loi APER : cinq lectures réglementaires, quatre fois plus d\'arbres', u: b+'blog/aper-ombrage-cinq-lectures.html', d: 'Un même parking de 1 500 places, cinq méthodes : de 90 à 350 arbres requis. Analyse des divergences d\'interprétation de la loi APER sur l\'obligation d\'ombrage.', k: 'loi APER ombrière photovoltaïque parking arbres PLU urbanisme ombrage stationnement réglementation' },
     { t: 'Flexibilité implicite, flexibilité explicite : deux logiques à distinguer', u: b+'blog/flexibilite-implicite-explicite.html', d: 'Derrière le mot flexibilité se cachent deux réalités : l\'une optimise la facture, l\'autre génère des revenus. Guide pour piloter chaque levier dans le bon cadre.', k: 'flexibilité implicite explicite effacement mécanisme capacité RTE agrégateur PPA pilotage énergie audit' }

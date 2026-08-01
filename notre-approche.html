@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre approche | Stratégie et ingénierie énergétique | GREENBIRDIE</title>
+  <meta name="description" content="Du diagnostic au pilotage continu, GREENBIRDIE accompagne votre stratégie énergétique : analyse, ingénierie, mise en œuvre et suivi des résultats.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.greenbirdie.com/notre-approche">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.greenbirdie.com/notre-approche">
+  <meta property="og:title" content="Notre approche — Stratégie et ingénierie énergétique — GREENBIRDIE">
+  <meta property="og:description" content="Du diagnostic au pilotage continu : comment GREENBIRDIE accompagne votre stratégie énergétique, de l'analyse jusqu'à la mise en œuvre et au suivi des résultats.">
+  <meta property="og:image" content="https://www.greenbirdie.com/assets/images/og-greenbirdie.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="GREENBIRDIE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notre approche — GREENBIRDIE">
+  <meta name="twitter:description" content="Du diagnostic au pilotage continu, une même équipe vous accompagne sur l'ensemble de votre stratégie énergétique.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .frise {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow-x: auto;
+      padding: 8px 0 16px;
+      margin: 40px 0;
+    }
+    .frise-step {
+      flex: 1;
+      min-width: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 0 8px;
+    }
+    .frise-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -1px;
+      width: 24px;
+      height: 2px;
+      background: var(--dark-green);
+      z-index: 1;
+    }
+    .frise-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--dark-green);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
+    .frise-step.active .frise-num {
+      background: var(--gold);
+    }
+    .frise-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark-green);
+      line-height: 1.3;
+    }
+    .frise-sub {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .etape-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .etape-num-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--dark-green);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .etape-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dark-green);
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<header class="hero hero--page">
+  <div class="hero-inner">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Notre approche</span>
+    </nav>
+    <div class="hero-eyebrow">Méthode</div>
+    <h1>De l'analyse au pilotage continu<br><em>de votre stratégie énergétique.</em></h1>
+    <p class="hero-sub">Acheter, piloter et produire votre énergie ne peuvent plus être traités séparément. GREENBIRDIE analyse votre situation, définit une stratégie globale, conçoit les solutions, accompagne leur mise en œuvre et en pilote durablement les résultats.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn btn--white">Demander un diagnostic <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#diagnostic" class="btn btn--outline-white">Découvrir la méthode</a>
+    </div>
+  </div>
+</header>
+
+<!-- SOUS-NAV -->
+<div class="bloc-subnav">
+  <div class="bloc-subnav-inner">
+    <a href="#diagnostic" class="active">Diagnostic</a>
+    <a href="#strategie">Stratégie</a>
+    <a href="#ingenierie">Ingénierie</a>
+    <a href="#mise-en-oeuvre">Mise en œuvre</a>
+    <a href="#pilotage">Pilotage continu</a>
+  </div>
+</div>
+
+<!-- FRISE -->
+<section class="section" style="padding-bottom:0;">
+  <div class="section-header" style="margin-bottom:32px;">
+    <div class="section-tag">Notre méthode</div>
+    <h2>Une même équipe, du début à la durée</h2>
+    <p class="lead">GREENBIRDIE ne livre pas des recommandations — il met en œuvre une stratégie. Cinq étapes structurent notre accompagnement, de la première analyse jusqu'au pilotage continu des résultats.</p>
+  </div>
+
+  <div class="frise">
+    <div class="frise-step">
+      <div class="frise-num">1</div>
+      <div class="frise-label">Diagnostic</div>
+      <div class="frise-sub">Comprendre votre situation</div>
+    </div>
+    <div class="frise-step">
+      <div class="frise-num">2</div>
+      <div class="frise-label">Stratégie</div>
+      <div class="frise-sub">Définir la trajectoire</div>
+    </div>
+    <div class="frise-step">
+      <div class="frise-num">3</div>
+      <div class="frise-label">Ingénierie</div>
+      <div class="frise-sub">Concevoir les solutions</div>
+    </div>
+    <div class="frise-step">
+      <div class="frise-num">4</div>
+      <div class="frise-label">Mise en œuvre</div>
+      <div class="frise-sub">Accompagner la réalisation</div>
+    </div>
+    <div class="frise-step">
+      <div class="frise-num">5</div>
+      <div class="frise-label">Pilotage continu</div>
+      <div class="frise-sub">Mesurer et ajuster</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ÉTAPE 1 — DIAGNOSTIC -->
+<section class="section" id="diagnostic">
+  <div class="two-col">
+    <div>
+      <div class="etape-header">
+        <div class="etape-num-badge">1</div>
+        <div class="etape-tag">Étape 1</div>
+      </div>
+      <h2>Comprendre votre situation énergétique</h2>
+      <p style="margin-bottom:24px;">GREENBIRDIE analyse votre patrimoine, vos contrats, vos consommations, vos équipements, vos données et vos obligations afin d'identifier les risques, les potentiels d'amélioration et les premières priorités.</p>
+      <ul class="checklist">
+        <li>Analyse des consommations et des coûts — lecture des factures, des courbes de charge et des historiques de prix payés</li>
+        <li>Audit énergétique — diagnostic des bâtiments, des procédés et des équipements</li>
+        <li>Analyse des contrats d'énergie en cours — durées, clauses, indexations, risques</li>
+        <li>Analyse des équipements — état, performance, potentiels de remplacement</li>
+        <li>Qualité et disponibilité des données — fiabilisation des comptages et des flux de données</li>
+        <li>Potentiels de flexibilité — identification des usages modulables et valorisables</li>
+        <li>Potentiels de production locale — surfaces disponibles, profils de consommation, éligibilité</li>
+      </ul>
+    </div>
+    <div>
+      <div class="offer-box" style="margin-bottom:24px;">
+        <div class="offer-eyebrow">Analyse de conformité réglementaire</div>
+        <h3 style="font-size:1.2rem;color:white;margin-bottom:12px;">Vos obligations, intégrées à votre feuille de route</h3>
+        <p style="font-size:14px;opacity:0.85;margin-bottom:20px;">Nous identifions les obligations applicables à votre patrimoine, évaluons votre niveau de conformité et intégrons les échéances réglementaires à votre feuille de route énergétique.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="reglementation.html#decret-tertiaire" style="color:rgba(255,255,255,0.8);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Décret Tertiaire — obligations et échéances
+          </a>
+          <a href="reglementation.html#bacs" style="color:rgba(255,255,255,0.8);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Décret BACS — pilotage automatisé
+          </a>
+          <a href="reglementation.html#audit-obligatoire" style="color:rgba(255,255,255,0.8);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Audit énergétique réglementaire (DADDUE 2)
+          </a>
+          <a href="reglementation.html#aper" style="color:rgba(255,255,255,0.8);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Loi APER — ombrières et toitures
+          </a>
+          <a href="reglementation.html#lom" style="color:rgba(255,255,255,0.8);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Loi LOM — IRVE et bornes de recharge
+          </a>
+          <a href="reglementation.html#csrd" style="color:rgba(255,255,255,0.8);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            CSRD — reporting RSE et carbone
+          </a>
+        </div>
+        <a href="reglementation.html" class="btn btn--outline-white mt-20" style="font-size:13px;padding:8px 16px;">Voir toute la réglementation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ÉTAPE 2 — STRATÉGIE -->
+<section class="section--cream-dark" id="strategie">
+  <div class="section-inner">
+    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
+      <div class="two-col">
+        <div>
+          <div class="etape-header">
+            <div class="etape-num-badge">2</div>
+            <div class="etape-tag">Étape 2</div>
+          </div>
+          <h2>Définir une trajectoire énergétique cohérente</h2>
+          <p style="margin-bottom:24px;">À partir du diagnostic, GREENBIRDIE construit une stratégie adaptée aux objectifs économiques, techniques, environnementaux et réglementaires du client.</p>
+          <ul class="checklist">
+            <li>Stratégie d'achat et de couverture — produits, durées, arbitrages prix fixe / exposition marché</li>
+            <li>Trajectoire de réduction des consommations — objectifs, leviers, hiérarchisation</li>
+            <li>Stratégie de pilotage et de flexibilité — usages modulables, valorisation sur les marchés</li>
+            <li>Stratégie de production — autoconsommation, valorisation des surplus, PPA</li>
+            <li>Décarbonation — scopes 1, 2 et 3, substitution des énergies fossiles</li>
+            <li>Scénarios techniques et économiques — comparaison des options, analyse de sensibilité</li>
+            <li>Hiérarchisation des actions — priorisation selon le rapport coût / impact</li>
+            <li>Feuille de route pluriannuelle — jalons, arbitrages CAPEX/OPEX, séquencement</li>
+            <li>Analyse des risques — prix, volume, réglementation, technologie</li>
+          </ul>
+        </div>
+        <div>
+          <div class="alert-box">
+            <h4>Une stratégie globale, pas des actions en silo</h4>
+            <p>L'erreur la plus courante est de traiter l'achat, la performance et la production comme trois chantiers indépendants. GREENBIRDIE construit une stratégie qui articule ces trois dimensions — pour éviter les contradictions et maximiser la valeur créée.</p>
+          </div>
+          <div class="info-box mt-16">
+            <h4>Acheter, piloter et produire</h4>
+            <p>Ces trois leviers sont interdépendants. Un PPA solaire modifie la stratégie d'achat résiduelle. Une installation de stockage change les potentiels de flexibilité. GREENBIRDIE conçoit la stratégie en tenant compte de ces interactions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ÉTAPE 3 — INGÉNIERIE -->
+<section class="section" id="ingenierie">
+  <div class="section-header">
+    <div class="etape-header" style="justify-content:center;">
+      <div class="etape-num-badge">3</div>
+      <div class="etape-tag">Étape 3</div>
+    </div>
+    <h2>Concevoir les solutions</h2>
+    <p class="lead">Les ingénieurs GREENBIRDIE traduisent la stratégie en solutions techniques, économiques, réglementaires et contractuelles directement exploitables.</p>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <h3>Études de faisabilité et dimensionnement</h3>
+      <p>Vérification technique, économique et réglementaire de la faisabilité des solutions retenues. Dimensionnement des équipements et des contrats.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">☀️</div>
+      <h3>Photovoltaïque et autoconsommation</h3>
+      <p>Conception des centrales (toiture, ombrières, sol), modélisation de la production et de l'autoconsommation, études de raccordement et dépôt des dossiers réglementaires.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌿</div>
+      <h3>Autres solutions énergétiques</h3>
+      <p>Biomasse, géothermie et autres sources d'énergie renouvelable — solutions étudiées et conçues selon les caractéristiques techniques et économiques de chaque projet.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🖥️</div>
+      <h3>GTB et systèmes de pilotage</h3>
+      <p>Conception des architectures de gestion technique du bâtiment, spécification des équipements de mesure et de contrôle, conformité Décret BACS.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📋</div>
+      <h3>Montage contractuel et consultations</h3>
+      <p>Rédaction des cahiers des charges et des documents de consultation. Analyse multicritères des offres reçues. Accompagnement à la négociation et à la contractualisation.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Études économiques et réglementaires</h3>
+      <p>Modélisation financière des projets, analyse de la rentabilité, constitution des dossiers réglementaires (permis, raccordement, OPERAT, bilans carbone).</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ÉTAPE 4 — MISE EN ŒUVRE -->
+<section class="section--light" id="mise-en-oeuvre">
+  <div class="section-inner">
+    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
+      <div class="two-col">
+        <div>
+          <div class="etape-header">
+            <div class="etape-num-badge">4</div>
+            <div class="etape-tag">Étape 4</div>
+          </div>
+          <h2>Accompagner la réalisation</h2>
+          <p style="margin-bottom:24px;">GREENBIRDIE ne s'arrête pas aux recommandations. Nous accompagnons les consultations, la contractualisation, les études, les travaux, la réception et la mise en service des solutions retenues.</p>
+          <ul class="checklist">
+            <li><strong>Assistance à maîtrise d'ouvrage (AMO)</strong> — conseil et contrôle au service du client, sans réaliser les travaux</li>
+            <li><strong>Maîtrise d'œuvre</strong> — conception détaillée, consultation des entreprises et direction de l'exécution des travaux</li>
+            <li><strong>EPC / contractant général</strong> — livraison clé en main lorsque le contexte le justifie</li>
+            <li>Consultations fournisseurs — appels d'offres énergie, analyse des offres, négociation</li>
+            <li>Consultations entreprises — mise en concurrence des installateurs et des prestataires</li>
+            <li>Suivi des études et des travaux — coordination, contrôle de qualité, gestion des délais</li>
+            <li>Réception et mise en service — vérification des performances, tests de fonctionnement</li>
+          </ul>
+        </div>
+        <div>
+          <div class="info-box">
+            <h4>AMO, MOE ou EPC : selon votre besoin</h4>
+            <p>GREENBIRDIE adapte son niveau d'implication au besoin du client. Pour un client disposant d'équipes techniques internes, nous intervenons en AMO. Pour un projet nécessitant un pilotage complet, nous assumons la maîtrise d'œuvre ou le rôle d'EPC. Cette flexibilité est l'une de nos singularités.</p>
+          </div>
+          <div class="alert-box mt-16">
+            <h4>Une continuité sans rupture</h4>
+            <p>La même équipe qui a réalisé le diagnostic et conçu la stratégie accompagne la mise en œuvre. Pas de transfert de dossier, pas de perte de mémoire de projet : la continuité est un gage de qualité et d'efficacité.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ÉTAPE 5 — PILOTAGE CONTINU -->
+<section class="section" id="pilotage">
+  <div class="two-col">
+    <div>
+      <div class="etape-header">
+        <div class="etape-num-badge">5</div>
+        <div class="etape-tag">Étape 5</div>
+      </div>
+      <h2>Mesurer, ajuster et améliorer dans la durée</h2>
+      <p style="margin-bottom:24px;">Les marchés, les usages, la réglementation et les performances des installations évoluent. GREENBIRDIE suit les résultats, actualise la stratégie et ajuste les décisions dans la durée.</p>
+      <ul class="checklist">
+        <li>Suivi des consommations et détection des anomalies</li>
+        <li>Suivi et contrôle des budgets énergétiques</li>
+        <li>Veille et suivi des marchés de l'énergie</li>
+        <li>Pilotage des achats — points de marché, décisions d'achat, couvertures</li>
+        <li>Suivi de la production — rendement, disponibilité, garanties</li>
+        <li>Mesure des économies réalisées — méthode IPMVP dans les contrats de performance</li>
+        <li>Pilotage de la flexibilité — mécanismes de capacité, effacement, marchés d'ajustement</li>
+        <li>Suivi de la conformité réglementaire — OPERAT, déclarations, échéances</li>
+        <li>Actualisation de la feuille de route — intégration des évolutions du contexte</li>
+      </ul>
+    </div>
+    <div>
+      <div style="background:var(--dark-green);border-radius:var(--radius);padding:32px;color:white;">
+        <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.6;margin-bottom:12px;">Outil numérique</div>
+        <h3 style="color:white;margin-bottom:12px;">Plateforme GREENBIRDIE Énergie</h3>
+        <p style="opacity:0.8;font-size:14px;margin-bottom:24px;">Un espace de pilotage inclus dans votre accompagnement : consolidation multisite, suivi budgétaire, alertes automatisées, conformité réglementaire en temps réel et optimisation par l'intelligence artificielle.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="opacity:0.6;margin-top:2px;">📊</span>
+            <span style="font-size:13px;opacity:0.85;">Consolidation de l'ensemble du patrimoine énergétique</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="opacity:0.6;margin-top:2px;">🔔</span>
+            <span style="font-size:13px;opacity:0.85;">Alertes en cas de dérive ou d'opportunité de marché</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="opacity:0.6;margin-top:2px;">🎯</span>
+            <span style="font-size:13px;opacity:0.85;">Avancement réglementaire en temps réel (OPERAT, BACS)</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="opacity:0.6;margin-top:2px;">⚡</span>
+            <span style="font-size:13px;opacity:0.85;">Optimisation par l'IA — flexibilités, anomalies, marchés</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:24px;border:2px solid var(--dark-green);border-radius:var(--radius);padding:24px;text-align:center;">
+        <div style="font-size:13px;color:var(--text-light);margin-bottom:8px;">Notre promesse</div>
+        <p style="font-size:1.15rem;font-weight:700;color:var(--dark-green);line-height:1.4;margin:0;">Votre direction de l'énergie externalisée</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BLOC ARTICULATION 3 BRIQUES -->
+<section class="section--cream-dark">
+  <div class="section-inner">
+    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
+      <div class="section-tag">Les trois dimensions</div>
+      <h2>Acheter, piloter et produire — une stratégie intégrée</h2>
+      <p class="lead" style="margin-bottom:40px;">Acheter, piloter et produire constituent les trois briques de votre stratégie énergétique. Notre approche permet de les articuler et de les transformer en décisions, en projets et en résultats mesurables.</p>
+
+      <div class="blocs-grid" style="grid-template-columns:repeat(3,1fr);">
+        <a href="achat-energie.html" style="display:block;border:1px solid var(--border);border-radius:var(--radius);padding:28px;background:white;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:24px;margin-bottom:12px;">⚡</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:var(--dark-green);">Acheter l'énergie</h3>
+          <p style="font-size:13px;color:var(--text-light);margin-bottom:16px;">Stratégie d'achat, contrats groupes, PPA, VPPA, consultation fournisseurs, suivi des marchés.</p>
+          <span style="font-size:13px;color:var(--dark-green);font-weight:600;display:flex;align-items:center;gap:4px;">Découvrir <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="flexibilite-performance.html" style="display:block;border:1px solid var(--border);border-radius:var(--radius);padding:28px;background:white;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:24px;margin-bottom:12px;">🎯</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:var(--dark-green);">Piloter les consommations</h3>
+          <p style="font-size:13px;color:var(--text-light);margin-bottom:16px;">Audit, Décret Tertiaire, BACS, effacement, flexibilité, stockage, performance carbone.</p>
+          <span style="font-size:13px;color:var(--dark-green);font-weight:600;display:flex;align-items:center;gap:4px;">Découvrir <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="production-energie.html" style="display:block;border:1px solid var(--border);border-radius:var(--radius);padding:28px;background:white;text-decoration:none;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:24px;margin-bottom:12px;">☀️</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:var(--dark-green);">Produire son énergie</h3>
+          <p style="font-size:13px;color:var(--text-light);margin-bottom:16px;">Photovoltaïque, autoconsommation, AMO / MOE / EPC, valorisation de la production.</p>
+          <span style="font-size:13px;color:var(--dark-green);font-weight:600;display:flex;align-items:center;gap:4px;">Découvrir <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Prêt à engager votre stratégie énergétique ?</h2>
+  <p>Un diagnostic de 30 minutes avec un ingénieur GREENBIRDIE suffit souvent à identifier les premiers leviers — sur vos achats, vos consommations ou votre production.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn btn--white btn--lg">Demander un diagnostic <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="references.html" class="btn btn--outline-white">Nos références</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <p style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:white;margin-bottom:8px;">GREENBIRDIE</p>
+      <p class="footer-tagline">L'énergie optimiste</p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.35);">Cabinet de conseil en énergie indépendant. Fondé en 2005.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Notre approche</h4>
+      <ul>
+        <li><a href="#diagnostic">Diagnostic</a></li>
+        <li><a href="#strategie">Stratégie</a></li>
+        <li><a href="#ingenierie">Ingénierie</a></li>
+        <li><a href="#mise-en-oeuvre">Mise en œuvre</a></li>
+        <li><a href="#pilotage">Pilotage continu</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Nos expertises</h4>
+      <ul>
+        <li><a href="achat-energie.html">Achat d'énergie</a></li>
+        <li><a href="flexibilite-performance.html">Flexibilité et performance</a></li>
+        <li><a href="production-energie.html">Production photovoltaïque</a></li>
+        <li><a href="notre-approche.html">Notre approche</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="blog/index.html">Articles et analyses</a></li>
+        <li><a href="reglementation.html">Réglementation énergétique</a></li>
+        <li><a href="contact.html">Parler à un expert</a></li>
+        <li><a href="mailto:contact@greenbirdie.com">contact@greenbirdie.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 GREENBIRDIE EURL — Paris 14e</p>
+    <div class="footer-legal">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="index.html">Accueil</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
