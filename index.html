@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://www.greenbirdie.com/">
   <meta property="og:title" content="Conseil en énergie pour entreprises — GREENBIRDIE">
   <meta property="og:description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable. +6 000 sites accompagnés en France. Expert depuis 2005.">
-  <meta property="og:image" content="https://www.greenbirdie.com/assets/images/og-greenbirdie.png">
+  <meta property="og:image" content="https://www.greenbirdie.com/assets/images/plateforme%20ia.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="GREENBIRDIE">
   <meta name="twitter:card" content="summary_large_image">
@@ -49,45 +49,99 @@
   <!-- Lucide icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-  <!-- Données structurées -->
+  <!-- Données structurées — Organization + Person(fondateur) + WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "GREENBIRDIE",
-    "description": "Cabinet d'ingénierie et de conseil en stratégie énergétique",
-    "foundingDate": "2005",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "13, rue Raymond Losserand",
-      "postalCode": "75014",
-      "addressLocality": "Paris",
-      "addressCountry": "FR"
-    },
-    "telephone": "+33144081050",
-    "email": "contact@greenbirdie.com",
-    "url": "https://www.greenbirdie.com",
-    "areaServed": "France",
-    "slogan": "L'énergie optimiste"
-  }
-  </script>
-
-  <!-- WebSite schema — active le Search Box dans Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.greenbirdie.com/",
-    "name": "GREENBIRDIE",
-    "description": "Cabinet d'ingénierie et de conseil en stratégie énergétique",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://www.greenbirdie.com/?q={search_term_string}"
+    "@graph": [
+      {
+        "@type": ["ProfessionalService", "Organization"],
+        "@id": "https://www.greenbirdie.com/#organization",
+        "name": "GREENBIRDIE",
+        "legalName": "GREENBIRDIE",
+        "alternateName": "GREENBIRDIE EURL",
+        "description": "GREENBIRDIE est un cabinet indépendant d'ingénierie et de conseil en énergie fondé en 2005 par Gaëtan Collin. Il accompagne les entreprises et patrimoines multisites dans l'achat d'énergie, la performance énergétique, la conformité réglementaire (Décret Tertiaire, BACS) et la production photovoltaïque.",
+        "slogan": "L'énergie optimiste",
+        "foundingDate": "2005",
+        "founder": { "@id": "https://www.greenbirdie.com/#founder" },
+        "logo": "https://www.greenbirdie.com/assets/images/logo-greenbirdie.png",
+        "image": "https://www.greenbirdie.com/assets/images/plateforme%20ia.jpg",
+        "url": "https://www.greenbirdie.com/",
+        "telephone": "+33144081050",
+        "email": "contact@greenbirdie.com",
+        "vatID": "FR34480959246",
+        "taxID": "480959246",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "13, rue Raymond Losserand",
+          "postalCode": "75014",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Paris" },
+          { "@type": "City", "name": "Bordeaux" },
+          { "@type": "City", "name": "Toulouse" },
+          { "@type": "City", "name": "Nantes" },
+          { "@type": "City", "name": "Saint-Germain-en-Laye" },
+          { "@type": "City", "name": "Mont-de-Marsan" },
+          { "@type": "AdministrativeArea", "name": "La Réunion" },
+          { "@type": "Country", "name": "France" }
+        ],
+        "knowsAbout": [
+          "Achat d'énergie",
+          "Stratégie énergétique",
+          "Décret Tertiaire",
+          "OPERAT",
+          "Photovoltaïque",
+          "PPA",
+          "PPA multiacheteurs",
+          "VPPA",
+          "Flexibilité énergétique",
+          "Effacement électrique",
+          "Décarbonation",
+          "Audit énergétique",
+          "Décret BACS",
+          "Loi APER"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33144081050",
+          "email": "contact@greenbirdie.com",
+          "contactType": "customer service",
+          "areaServed": "FR",
+          "availableLanguage": "French"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/greenbirdie"
+        ]
       },
-      "query-input": "required name=search_term_string"
-    }
+      {
+        "@type": "Person",
+        "@id": "https://www.greenbirdie.com/#founder",
+        "name": "Gaëtan Collin",
+        "jobTitle": "Président-fondateur de GREENBIRDIE",
+        "description": "Ingénieur de formation, Gaëtan Collin a fondé GREENBIRDIE en 2005. Expert reconnu en achats d'énergie, performance énergétique, audits et photovoltaïque, il anime le groupe d'experts AFNOR consacré aux normes NF EN 16247 (audits énergétiques) et contribue aux travaux internationaux relatifs à ISO 50001.",
+        "worksFor": { "@id": "https://www.greenbirdie.com/#organization" },
+        "url": "https://www.greenbirdie.com/a-propos"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.greenbirdie.com/#website",
+        "url": "https://www.greenbirdie.com/",
+        "name": "GREENBIRDIE",
+        "description": "Cabinet d'ingénierie et de conseil en stratégie énergétique",
+        "publisher": { "@id": "https://www.greenbirdie.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.greenbirdie.com/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
   }
   </script>
 </head>

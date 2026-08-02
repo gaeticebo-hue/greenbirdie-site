@@ -1,0 +1,7 @@
+# Redirections 301 — anciennes URL du site précédent
+/notre-histoire       /a-propos          301
+/nos-missions         /achat-energie     301
+/qui-sommes-nous      /a-propos          301
+/contact-us           /contact           301
+/energie-solaire      /production-energie 301
+/audit-energetique    /flexibilite-performance 301

@@ -3,7 +3,6 @@ Allow: /
 
 # Pages exclues de l'indexation
 Disallow: /404.html
-Disallow: /mentions-legales.html
 
 # Sitemap
 Sitemap: https://www.greenbirdie.com/sitemap.xml
