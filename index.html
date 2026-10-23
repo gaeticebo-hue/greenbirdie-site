@@ -1,53 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conseil en énergie pour entreprises — GREENBIRDIE</title>
-  <meta name="description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable. +6 000 sites accompagnés en France. Expert depuis 2005.">
+  <title>Optimisation énergétique 360° pour entreprises — GREENBIRDIE</title>
+  <meta name="description" content="Achat d'énergie, pilotage et production locale calculés ensemble : un chiffrage juste, sans gains qui se recouvrent. Diagnostic 360° GREENBIRDIE.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.greenbirdie.com/">
 
   <!-- Open Graph & Twitter Card -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.greenbirdie.com/">
-  <meta property="og:title" content="Conseil en énergie pour entreprises — GREENBIRDIE">
-  <meta property="og:description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable. +6 000 sites accompagnés en France. Expert depuis 2005.">
+  <meta property="og:title" content="Optimisation énergétique 360° pour entreprises — GREENBIRDIE">
+  <meta property="og:description" content="Achat d'énergie, pilotage et production locale calculés ensemble : un chiffrage juste, sans gains qui se recouvrent.">
   <meta property="og:image" content="https://www.greenbirdie.com/assets/images/plateforme%20ia.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="GREENBIRDIE">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Conseil en énergie pour entreprises — GREENBIRDIE">
-  <meta name="twitter:description" content="GREENBIRDIE accompagne les entreprises dans l'achat d'énergie, la performance énergétique et la production renouvelable. +6 000 sites accompagnés en France. Expert depuis 2005.">
+  <meta name="twitter:title" content="Optimisation énergétique 360° pour entreprises — GREENBIRDIE">
+  <meta name="twitter:description" content="Achat d'énergie, pilotage et production locale calculés ensemble : un chiffrage juste, sans gains qui se recouvrent.">
 
-  <!-- Fonts — Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="assets/css/main.css">
-
-  <!-- Tailwind CSS (Play CDN — preflight désactivé pour coexister avec main.css) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      corePlugins: { preflight: false },
-      theme: {
-        extend: {
-          colors: {
-            'gb-dark': '#1a1a1a',
-            'gb-gold': '#b8962e',
-            'gb-green': '#1a3d2b',
-            'gb-blue': '#1a3a5c',
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Lucide icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="assets/css/nav-shared.css?v=20261023">
+  <link rel="stylesheet" href="assets/css/home-360.css?v=20261023">
 
   <!-- Données structurées — Organization + Person(fondateur) + WebSite -->
   <script type="application/ld+json">
@@ -131,535 +109,500 @@
         "url": "https://www.greenbirdie.com/",
         "name": "GREENBIRDIE",
         "description": "Cabinet d'ingénierie et de conseil en stratégie énergétique",
-        "publisher": { "@id": "https://www.greenbirdie.com/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://www.greenbirdie.com/?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
+        "publisher": { "@id": "https://www.greenbirdie.com/#organization" }
       }
     ]
   }
   </script>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
 <div id="nav-placeholder"></div>
 
-<!-- ═══════ HERO ═══════ -->
-<header class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Cabinet d'ingénierie et de conseil en énergie — Depuis 2005</div>
-    <h1>Acheter, piloter<br>et produire<br><em>votre énergie.</em></h1>
-    <p class="hero-sub">Mieux acheter, consommer au bon moment, produire localement : GREENBIRDIE accompagne les entreprises et les patrimoines multisites dans la maîtrise de leurs coûts, de leurs consommations et de leur production énergétique, de la stratégie jusqu'à la mise en œuvre.</p>
-    <div class="bloc-pills">
-      <a href="achat-energie.html" class="bloc-pill bloc-pill--1">⚡ Acheter au bon prix</a>
-      <a href="flexibilite-performance.html" class="bloc-pill bloc-pill--2">🎯 Consommer au bon moment</a>
-      <a href="production-energie.html" class="bloc-pill bloc-pill--3">☀️ Produire son énergie</a>
-    </div>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn btn--white btn--lg">
-        Demander un diagnostic gratuit
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#blocs" class="btn btn--outline-white">Découvrir nos expertises</a>
-    </div>
-  </div>
-</header>
+<main id="contenu">
 
-<!-- ═══════ RÉFÉRENCES CLIENTS ═══════ -->
-<div class="refs-strip">
-  <div class="refs-strip-inner">
-    <span class="refs-label">Ils nous font confiance</span>
-    <div class="refs-logos">
-      <span class="ref-logo">Accor</span>
-      <span class="ref-logo">Louvre Hotels</span>
-      <span class="ref-logo">Carrefour</span>
-      <span class="ref-logo">Intermarché</span>
-      <span class="ref-logo">L'Oréal</span>
-      <span class="ref-logo">Safran</span>
-      <span class="ref-logo">Lidl</span>
+<!-- ═════════ ÉCRAN 1 — LA PROMESSE ÉCONOMIQUE ═════════ -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="signature" aria-label="Signature : acheter, piloter, produire"><span>Acheter</span><span>•</span><span>Piloter</span><span>•</span><span>Produire</span></p>
+      <h1 id="h1">Vos économies ne s'additionnent pas. Elles se calculent ensemble.</h1>
+      <div class="hero-stat">
+        <span class="num">−3 à −12&nbsp;%</span>
+        <span class="cap">l'écart entre la somme des gains calculés levier par levier et le gain réel d'une approche 360°<sup><a href="#methode" aria-label="Voir la méthode">1</a></sup></span>
+      </div>
+      <p class="lead">Acheter, piloter et produire se recouvrent : chaque levier réduit le potentiel des autres. En les modélisant ensemble, GREENBIRDIE vous donne le vrai chiffre, et la bonne combinaison.</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#diagnostic">Découvrez votre potentiel d'économies <span aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="#demo">Voir pourquoi ça compte</a>
+      </div>
+      <p class="footnote"><sup>1</sup> Écart observé sur deux sites industriels simulés avec GB Energy Architect : −3 % pour une fromagerie industrielle, −12 % pour des entrepôts frigorifiques. Résultats variables selon les profils énergétiques. <a href="#methode">Lire la méthode</a>.</p>
     </div>
-  </div>
-</div>
 
-<!-- ═══════ STATS ═══════ -->
-<div class="stats-strip">
-  <div class="stats-inner">
-    <div class="stat">
-      <div class="stat-num">2,7 TWh</div>
-      <div class="stat-label">De consommations d'énergie<br>accompagnées</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">+6 000</div>
-      <div class="stat-label">Sites accompagnés<br>dans OPERAT</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">+2 000</div>
-      <div class="stat-label">Audits énergétiques<br>réalisés</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">+5 GWc</div>
-      <div class="stat-label">De projets photovoltaïques<br>étudiés et accompagnés</div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ 3 BLOCS STRATÉGIQUES ═══════ -->
-<section class="section" id="blocs">
-  <div class="section-header">
-    <div class="section-tag">Notre approche</div>
-    <h2>Une chaîne de valeur énergétique complète</h2>
-    <p class="lead">L'énergie d'une entreprise se pilote sur trois dimensions complémentaires. GREENBIRDIE intervient sur l'ensemble de cette chaîne — de la stratégie d'achat jusqu'à la valorisation de la production — pour maximiser la performance économique et environnementale.</p>
-  </div>
-
-  <div class="blocs-grid">
-    <!-- Bloc 1 -->
-    <a href="achat-energie.html" class="bloc-card bloc-card--1">
-      <div class="bloc-card-icon">⚡</div>
-      <h3>Acheter l'énergie au bon prix</h3>
-      <p>Définir une stratégie d'achat adaptée à votre exposition aux marchés, organiser les consultations, structurer les contrats et piloter vos budgets énergétiques sur la durée.</p>
-      <ul class="bloc-card-list">
-        <li>Stratégie d'achat et consultation fournisseurs</li>
-        <li>Contrats groupes et achats multisites</li>
-        <li>PPA, PPA multiacheteurs et VPPA</li>
-        <li>Suivi des marchés et contrôle budgétaire</li>
-      </ul>
-      <span class="bloc-card-cta">
-        Optimiser mes achats d'énergie
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </span>
-    </a>
-
-    <!-- Bloc 2 -->
-    <a href="flexibilite-performance.html" class="bloc-card bloc-card--2">
-      <div class="bloc-card-icon">🎯</div>
-      <h3>Consommer au bon moment</h3>
-      <p>Réduire les consommations, piloter les usages selon les prix de marché, valoriser les flexibilités et structurer une stratégie carbone cohérente avec vos engagements RSE.</p>
-      <ul class="bloc-card-list">
-        <li>Audit et performance énergétique</li>
-        <li>Décret Tertiaire, BACS et systèmes de pilotage</li>
-        <li>Effacement et flexibilité explicite</li>
-        <li>Stockage électrique et thermique</li>
-      </ul>
-      <span class="bloc-card-cta">
-        Valoriser ma flexibilité
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </span>
-    </a>
-
-    <!-- Bloc 3 -->
-    <a href="production-energie.html" class="bloc-card bloc-card--3">
-      <div class="bloc-card-icon">☀️</div>
-      <h3>Produire et valoriser son énergie</h3>
-      <p>Identifier les potentiels de production sur votre patrimoine, concevoir, financer et réaliser vos installations, puis valoriser chaque kilowattheure produit au meilleur prix.</p>
-      <ul class="bloc-card-list">
-        <li>Photovoltaïque : toiture, ombrières, sol</li>
-        <li>Autoconsommation individuelle et collective</li>
-        <li>AMO, maîtrise d'œuvre ou EPC clé en main — qualification AQPV</li>
-        <li>PPA solaire et valorisation de la production</li>
-      </ul>
-      <span class="bloc-card-cta">
-        Développer ma production
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </span>
-    </a>
+    <aside class="proof-card" aria-label="Ce que signifie −3 à −12 % sur deux sites simulés">
+      <span class="tag">Deux sites simulés</span>
+      <h2 style="margin-top:12px">Ce que « −12 % » veut dire</h2>
+      <p class="sub">Économies annuelles : somme des leviers calculés séparément, et calcul coordonné.</p>
+      <div class="mini-row">
+        <div class="lab"><span>Fromagerie industrielle</span><span>302 → 293 k€/an</span></div>
+        <div class="mini-bar" role="img" aria-label="Fromagerie : 302 k€ par an annoncés levier par levier, 293 k€ par an en calcul coordonné, soit 3 % de moins"><i class="b-sep" style="width:97%"></i><i class="b-syn" style="width:3%"></i></div>
+      </div>
+      <div class="mini-row">
+        <div class="lab"><span>Entrepôts frigorifiques</span><span>271 → 240 k€/an</span></div>
+        <div class="mini-bar" role="img" aria-label="Entrepôts : 271 k€ par an annoncés levier par levier, 240 k€ par an en calcul coordonné, soit 12 % de moins"><i class="b-sep" style="width:88%"></i><i class="b-syn" style="width:12%"></i></div>
+      </div>
+      <div class="proof-delta">
+        <span class="big">−12&nbsp;%</span>
+        <p><strong>de gain réel en moins</strong> que la somme annoncée, pour les entrepôts. Les leviers se recouvrent : les additionner surestime le résultat.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="trust" aria-label="Repères GREENBIRDIE">
+  <div class="wrap">
+    <ul>
+      <li><b>≈ 40</b>ingénieurs pluridisciplinaires</li>
+      <li><b>Depuis 2005</b>cabinet d'ingénierie indépendant</li>
+      <li><b>3 métiers</b>sous un même toit : acheter, piloter, produire</li>
+      <li><b>1 outil</b>GB Energy Architect pour modéliser vos gains</li>
+    </ul>
+  </div>
+</div>
 
-<!-- ═══════ NOTRE APPROCHE ═══════ -->
-<section class="section--cream-dark">
-  <div class="section-inner">
-    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
-      <div class="section-tag">Notre approche</div>
-      <h2>Du diagnostic au pilotage continu</h2>
-      <p class="lead" style="margin-bottom:40px;">Une même équipe vous accompagne pour analyser votre situation, construire la stratégie, concevoir les solutions, sécuriser leur réalisation et piloter les résultats dans la durée.</p>
-
-      <div style="display:flex;gap:0;overflow-x:auto;padding:8px 0 24px;margin-bottom:32px;">
-        <div style="flex:1;min-width:120px;text-align:center;padding:0 8px;position:relative;">
-          <div style="width:40px;height:40px;border-radius:50%;background:var(--dark-green);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin:0 auto 10px;">1</div>
-          <div style="font-size:13px;font-weight:600;color:var(--dark-green);">Diagnostic</div>
+<!-- ═════════ ÉCRAN 2 — LE PROBLÈME DES SILOS ═════════ -->
+<section id="approche" aria-labelledby="h-silo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Le problème</span>
+      <h2 id="h-silo">Trois bonnes décisions peuvent faire une mauvaise stratégie.</h2>
+      <p class="lead">Un excellent contrat, des bâtiments performants, une centrale solaire rentable : chaque décision, prise séparément, se défend. Mais l'optimum de l'ensemble n'est pas la somme des optimums.</p>
+    </div>
+    <div class="silo-grid">
+      <div>
+        <div class="silo-cards">
+          <div class="silo-card"><span class="dot" style="background:var(--c-buy)"></span><div><h3>Un excellent contrat d'énergie</h3><p>Des blocs de couverture calés sur votre profil de consommation actuel.</p></div></div>
+          <div class="silo-card"><span class="dot" style="background:var(--c-pilot)"></span><div><h3>Des bâtiments et des usages performants</h3><p>Une consommation maîtrisée, des puissances ajustées.</p></div></div>
+          <div class="silo-card"><span class="dot" style="background:var(--c-prod)"></span><div><h3>Une installation solaire rentable</h3><p>Dimensionnée pour produire le plus possible sur le toit ou les ombrières.</p></div></div>
         </div>
-        <div style="flex:1;min-width:120px;text-align:center;padding:0 8px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:var(--dark-green);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin:0 auto 10px;">2</div>
-          <div style="font-size:13px;font-weight:600;color:var(--dark-green);">Stratégie</div>
-        </div>
-        <div style="flex:1;min-width:120px;text-align:center;padding:0 8px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:var(--dark-green);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin:0 auto 10px;">3</div>
-          <div style="font-size:13px;font-weight:600;color:var(--dark-green);">Ingénierie</div>
-        </div>
-        <div style="flex:1;min-width:120px;text-align:center;padding:0 8px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:var(--dark-green);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin:0 auto 10px;">4</div>
-          <div style="font-size:13px;font-weight:600;color:var(--dark-green);">Mise en œuvre</div>
-        </div>
-        <div style="flex:1;min-width:120px;text-align:center;padding:0 8px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:var(--gold, #b8962e);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin:0 auto 10px;">5</div>
-          <div style="font-size:13px;font-weight:600;color:var(--dark-green);">Pilotage continu</div>
-        </div>
+        <p class="silo-but">Puis le solaire se met à produire à midi… et vos blocs, calés sur l'ancienne courbe, deviennent trop gros. Le surplus est revendu au prix du marché, parfois négatif.</p>
+        <p class="help">Les trois décisions étaient bonnes ; leur enchaînement ne l'était pas.</p>
       </div>
 
-      <div style="text-align:center;">
-        <a href="notre-approche.html" class="btn btn--primary">Découvrir notre approche <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <div class="viz-card">
+        <div class="viz-head">
+          <h3>Une journée type, même site, deux stratégies</h3>
+          <div class="seg" role="group" aria-label="Choisir la stratégie">
+            <button type="button" data-silo="silo" aria-pressed="true">Décisions séparées</button>
+            <button type="button" data-silo="coord" aria-pressed="false">Coordonnées</button>
+          </div>
+        </div>
+        <svg id="siloSvg" viewBox="0 0 520 300" role="img" aria-labelledby="siloT siloD"></svg>
+        <div class="legend" aria-hidden="true">
+          <span><i style="background:var(--c-pilot);opacity:.35"></i>Consommation restant à acheter</span>
+          <span><i style="background:var(--c-prod)"></i>Production solaire</span>
+          <span><i style="background:repeating-linear-gradient(135deg,#C0392B 0 4px,#fff 4px 8px);border-color:#A32D1F"></i>Couverture en surplus</span>
+          <span><i style="background:#fff;border-style:dashed"></i>Bloc acheté</span>
+        </div>
+        <p class="viz-note" id="siloNote" aria-live="polite"></p>
+        <p class="help">Schéma pédagogique : formes de courbes illustratives.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+<!-- ═════════ ÉCRAN 3 — POURQUOI LE 360° RAPPORTE DAVANTAGE ═════════ -->
+<section id="demo" class="band" aria-labelledby="h-demo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Pourquoi calculer ensemble</span>
+      <h2 id="h-demo">Les leviers se recouvrent.</h2>
+      <p class="lead">Combinez les expertises et observez l'écart entre la somme des gains calculés levier par levier et le gain réel. Réglez le budget et le recouvrement pour voir l'effet.</p>
+    </div>
 
-<!-- ═══════ POSITIONNEMENT / DIFFÉRENCIATION ═══════ -->
-<section class="section">
-  <div class="section-header">
-    <div class="section-tag">Ce qui nous différencie</div>
-    <h2>Un partenaire stratégique, pas un prestataire de service</h2>
-    <p class="lead">GREENBIRDIE intervient très en amont des décisions — avant même la mise en concurrence — pour construire des stratégies cohérentes avec vos objectifs financiers, réglementaires et environnementaux.</p>
-  </div>
-
-  <div class="data-cards-grid">
-    <div class="data-card">
-      <i data-lucide="shield-check" class="data-card-icon"></i>
-      <h3>Conseil indépendant</h3>
-      <p>Nous n'achetons pas d'énergie, nous ne gérons pas d'actifs en propre. Notre rémunération est indépendante des choix que nous recommandons — ce qui garantit l'objectivité de nos analyses.</p>
-    </div>
-    <div class="data-card">
-      <i data-lucide="bar-chart-2" class="data-card-icon"></i>
-      <h3>Expertise des marchés de l'énergie</h3>
-      <p>Suivi continu des marchés spot, à terme et de capacité. Nos décisions d'achat sont fondées sur des données de marché réelles, pas sur des estimations.</p>
-    </div>
-    <div class="data-card">
-      <i data-lucide="scale" class="data-card-icon"></i>
-      <h3>Maîtrise réglementaire</h3>
-      <p>Décret Tertiaire, BACS, loi APER, audits obligatoires, mécanismes de capacité : nous transformons vos obligations en leviers de performance économique.</p>
-    </div>
-    <div class="data-card">
-      <i data-lucide="cpu" class="data-card-icon"></i>
-      <h3>Données et intelligence artificielle</h3>
-      <p>L'expertise de nos ingénieurs, augmentée par la donnée et l'IA. Consolidation multisite, détection d'anomalies et optimisation en temps réel.</p>
-    </div>
-    <div class="data-card">
-      <i data-lucide="wrench" class="data-card-icon"></i>
-      <h3>Capacité opérationnelle</h3>
-      <p>Études de faisabilité, maîtrise d'œuvre, consultations, accompagnement contractuel : nous allons jusqu'à la mise en œuvre, pas seulement la stratégie.</p>
-    </div>
-    <div class="data-card">
-      <i data-lucide="map-pin" class="data-card-icon"></i>
-      <h3>Couverture nationale</h3>
-      <p>Paris, Bordeaux, Toulouse, Nantes, Mont-de-Marsan, Saint-Germain-en-Laye, La Réunion — une présence territoriale au service de vos portefeuilles multisites.</p>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ═══════ RÉGLEMENTATION ═══════ -->
-<section class="section--cream-dark">
-  <div class="section-inner">
-    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
-      <div class="two-col">
+    <div class="demo" style="color:var(--ink)">
+      <p style="margin-bottom:16px"><span class="tag">Exemple illustratif — modèle simplifié</span></p>
+      <div class="demo-grid">
         <div>
-          <div class="section-tag">Réglementation énergétique</div>
-          <h2>Transformer les obligations en opportunités</h2>
-          <p class="lead" style="margin-bottom:24px;">Les réglementations énergétiques se multiplient et leurs échéances se rapprochent. GREENBIRDIE vous aide à identifier vos obligations, à comprendre les enjeux financiers et à construire des plans d'action qui créent de la valeur.</p>
-          <ul class="checklist">
-            <li>Décret Tertiaire : objectifs 2030 à atteindre sous peine de sanctions</li>
-            <li>Décret BACS : pilotage automatisé des systèmes du bâtiment</li>
-            <li>Loi APER : obligation photovoltaïque sur les parkings et bâtiments</li>
-            <li>Audits énergétiques obligatoires pour les grandes entreprises</li>
-            <li>Mécanismes de capacité et marchés de flexibilité</li>
+          <div class="ctrl">
+            <div class="lbl" id="lblLev">Leviers combinés</div>
+            <div class="chips" role="group" aria-labelledby="lblLev">
+              <button type="button" class="chip" data-lev="a" aria-pressed="true" style="--sw:var(--c-buy)"><span class="sw"></span>Acheter</button>
+              <button type="button" class="chip" data-lev="p" aria-pressed="true" style="--sw:var(--c-pilot)"><span class="sw"></span>Piloter</button>
+              <button type="button" class="chip" data-lev="r" aria-pressed="true" style="--sw:var(--c-prod)"><span class="sw"></span>Produire</button>
+            </div>
+            <div class="presets" style="margin-top:10px" aria-label="Combinaisons rapides">
+              <button type="button" data-preset="ap">Acheter + Piloter</button>
+              <button type="button" data-preset="ar">Acheter + Produire</button>
+              <button type="button" data-preset="pr">Piloter + Produire</button>
+              <button type="button" data-preset="apr">Acheter + Piloter + Produire</button>
+            </div>
+          </div>
+          <div class="ctrl">
+            <label for="budget">Facture énergétique annuelle <output id="budgetOut" for="budget"></output></label>
+            <input type="range" id="budget" min="200" max="5000" step="50" value="1000">
+            <div class="help">Hypothèse de départ du modèle.</div>
+          </div>
+          <div class="ctrl">
+            <label for="compl">Recouvrement des leviers <output id="complOut" for="compl"></output></label>
+            <input type="range" id="compl" min="3" max="12" step="1" value="8">
+            <div class="help">Plus vos leviers se chevauchent (profil, contrats, production), plus la somme annoncée surestime le résultat. Fourchette : celle observée sur les deux sites étudiés.</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="result-line" aria-live="polite">
+            <div class="kpi"><div class="k">Somme levier par levier</div><div class="v" id="rSep">—</div></div>
+            <div class="kpi"><div class="k">Calcul coordonné</div><div class="v" id="rCoord">—</div></div>
+            <div class="kpi kpi--hl"><div class="k">Écart de recouvrement</div><div class="v" id="rGain">—</div></div>
+          </div>
+          <div class="demo-viz">
+            <div>
+              <h3>Les interactions (k€ par an)</h3>
+              <svg id="mapSvg" viewBox="0 0 320 290" role="img" aria-label="Carte des interactions entre les trois leviers"></svg>
+            </div>
+            <div>
+              <h3>Annoncé ou réel, par an</h3>
+              <svg id="barSvg" viewBox="0 0 320 290" role="img" aria-label="Comparaison des économies séparées et coordonnées"></svg>
+            </div>
+          </div>
+          <div class="legend">
+            <span><i style="background:var(--c-buy)"></i>Acheter</span>
+            <span><i style="background:var(--c-pilot)"></i>Piloter</span>
+            <span><i style="background:var(--c-prod)"></i>Produire</span>
+            <span><i style="background:repeating-linear-gradient(135deg,var(--sun) 0 4px,#fff 4px 8px)"></i>Recouvrement</span>
+          </div>
+          <p id="demoMsg" class="help" style="margin-top:10px" aria-live="polite"></p>
+          <details class="table-alt"><summary>Voir les valeurs en tableau</summary><div id="demoTable"></div></details>
+        </div>
+      </div>
+      <p class="demo-foot"><strong>Lecture :</strong> un levier seul n'a pas de recouvrement. À deux, il reste faible ; à trois, il atteint l'écart observé sur les cas étudiés. L'écart se mesure sur les économies, pas sur la facture totale. <strong>Valeurs illustratives, issues d'un modèle simplifié.</strong> Deux cas simulés sur des courbes de charge réelles sont présentés <a href="#architect">plus bas</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ ÉCRAN 4 — LA PREUVE PAR LES CHIFFRES ═════════ -->
+<section id="preuves" aria-labelledby="h-preuves">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">La preuve par les chiffres</span>
+      <h2 id="h-preuves">Des gains modélisés sur des courbes de charge réelles.</h2>
+      <p class="lead">GB Energy Architect calcule, quart d'heure par quart d'heure, l'effet de chaque levier sur les autres. Voici ce que cela donne sur deux sites industriels.</p>
+    </div>
+    <div class="kpi-grid">
+      <div class="proof"><span class="sub-tag">Écart de recouvrement</span><div class="big">−3 à −12&nbsp;%</div><p>entre la somme des gains calculés levier par levier et le gain réel coordonné, sur les deux sites.</p></div>
+      <div class="proof"><span class="sub-tag">Fromagerie industrielle</span><div class="big neg">−29&nbsp;%</div><p>sur la facture d'énergie, tous leviers combinés : 293 k€ par an.</p></div>
+      <div class="proof"><span class="sub-tag">Entrepôts frigorifiques</span><div class="big neg">−26&nbsp;%</div><p>sur la facture d'énergie, tous leviers combinés : 240 k€ par an.</p></div>
+      <div class="proof"><span class="sub-tag">Retour sur investissement</span><div class="big">5 à 8 ans</div><p>sur les deux sites, production, stockage et pilotage compris.</p></div>
+    </div>
+    <p class="proof-note">Additionner les gains calculés levier par levier aurait annoncé −30 % et −29 % sur la facture ; le calcul coordonné donne −29 % et −26 %. Les deux sites sont détaillés <a href="#architect">levier par levier</a>.</p>
+
+    <details class="method" id="methode">
+      <summary>Méthode : que signifie « −3 à −12 % » ?</summary>
+      <div class="inner">
+        <div>
+          <h4>Ce que c'est</h4>
+          <p class="equation">Écart = (gain coordonné − somme des gains levier par levier) ÷ somme des gains levier par levier</p>
+          <p class="help" style="margin-top:8px"><strong>Somme levier par levier :</strong> chaque levier est évalué seul, à partir de la situation initiale, puis les gains sont additionnés.</p>
+          <h4 style="margin-top:14px">Ce que ce n'est pas</h4>
+          <ul>
+            <li>Une baisse de la facture énergétique : celle-ci est de −29 % et −26 % sur les deux sites.</li>
+            <li>Un résultat garanti pour chaque client.</li>
+            <li>Une perte : c'est le chiffre juste, là où une addition aurait promis davantage.</li>
           </ul>
-          <a href="reglementation.html" class="btn btn--outline mt-24">
-            Explorer la réglementation
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
         </div>
         <div>
-          <div class="alert-box--red alert-box" style="margin-bottom:16px;">
-            <h4>Décret Tertiaire — Échéance 2030</h4>
-            <p>Les bâtiments tertiaires de plus de 1 000 m² doivent réduire leur consommation de 40 % d'ici 2030 (base 2010). Non-conformité : jusqu'à 7 500 € d'amende et publication publique.</p>
-          </div>
-          <div class="alert-box" style="margin-bottom:16px;">
-            <h4>Loi APER — Parkings et bâtiments</h4>
-            <p>Obligation de couvrir les ombrières de parking et certains toits de panneaux photovoltaïques. Les échéances débutent en 2026. GREENBIRDIE réalise vos études de faisabilité et gère les appels d'offres.</p>
-          </div>
-          <div class="info-box">
-            <h4>Décret BACS — Pilotage automatisé</h4>
-            <p>Les bâtiments tertiaires non résidentiels dont les systèmes de chauffage ou de climatisation ont une puissance nominale supérieure à 70 kW doivent être équipés d'un système de régulation automatique avant le 1er janvier 2027.</p>
-          </div>
+          <h4>Les deux sites présentés</h4>
+          <ul>
+            <li>Fromagerie industrielle : 302 k€ par an annoncés levier par levier, 293 k€ en calcul coordonné (−3 %).</li>
+            <li>Entrepôts frigorifiques : 271 k€ par an annoncés levier par levier, 240 k€ en calcul coordonné (−12 %).</li>
+            <li>Simulation sur 12 mois de courbes de charge réelles anonymisées (septembre 2025 à septembre 2026).</li>
+            <li>Composante énergie de la facture, hors acheminement et taxes.</li>
+            <li>Valorisation de la flexibilité selon un barème interne GREENBIRDIE.</li>
+            <li>Résultats modélisés : ils précèdent les gains constatés après mise en œuvre.</li>
+          </ul>
+          <p class="help">Écart observé sur les configurations étudiées par GREENBIRDIE. Résultats variables selon les profils énergétiques.</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═════════ ÉCRAN 5 — GB ENERGY ARCHITECT ═════════ -->
+<section id="architect" class="band" aria-labelledby="h-arch">
+  <div class="wrap arch-grid">
+    <div>
+      <span class="eyebrow">GB Energy Architect</span>
+      <h2 id="h-arch">Nous ne nous contentons pas de promettre des économies. Nous les modélisons.</h2>
+      <p class="lead">Le moteur d'ingénierie qui chiffre l'effet de chaque décision sur toutes les autres, au quart d'heure, avant que vous n'investissiez.</p>
+      <ul class="arch-list">
+        <li><span class="ic">1</span><div><b>Votre consommation, quart d'heure par quart d'heure</b><span class="d">Courbes de charge réelles, pas des moyennes annuelles.</span></div></li>
+        <li><span class="ic">2</span><div><b>Tous les contrats comparés</b><span class="d">Prix fixe, Full Spot, Bloc + Spot : le bon dimensionnement, pas seulement le bon prix.</span></div></li>
+        <li><span class="ic">3</span><div><b>Solaire, stockage, flexibilité intégrés</b><span class="d">Chaque levier est recalculé en tenant compte des précédents.</span></div></li>
+        <li><span class="ic">4</span><div><b>Des scénarios pour décider</b><span class="d">Gains, investissements, retour : vous choisissez en connaissance de cause.</span></div></li>
+      </ul>
+      <a class="btn btn--sun" href="#diagnostic">Modéliser mon site <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="tool-card">
+      <div class="viz-head">
+        <h3>Votre facture, levier par levier</h3>
+        <span class="tag">Simulation</span>
+      </div>
+      <div class="case-tabs" role="tablist" aria-label="Choisir un site">
+        <button type="button" role="tab" id="ct-fromagerie" data-case="fromagerie" aria-selected="true">Fromagerie industrielle</button>
+        <button type="button" role="tab" id="ct-entrepots" data-case="entrepots" aria-selected="false">Entrepôts frigorifiques</button>
+      </div>
+      <p class="case-desc" id="caseDesc"></p>
+      <svg id="cascadeSvg" viewBox="0 0 520 320" role="img" aria-label="Cascade de la facture énergétique, levier par levier"></svg>
+      <div class="chips" role="group" aria-label="Leviers affichés" id="cascadeChips" style="margin-top:8px">
+        <button type="button" class="chip" data-nlev="1" aria-pressed="false" style="--sw:var(--c-prod)"><span class="sw"></span>1 · Produire</button>
+        <button type="button" class="chip" data-nlev="2" aria-pressed="false" style="--sw:var(--c-pilot)"><span class="sw"></span>+ Piloter</button>
+        <button type="button" class="chip" data-nlev="3" aria-pressed="true" style="--sw:var(--c-buy)"><span class="sw"></span>+ Acheter</button>
+      </div>
+      <div class="case-kpis" id="caseKpis" aria-live="polite"></div>
+      <p class="fine" id="caseNote"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ ÉCRAN 6 — LES TROIS EXPERTISES ═════════ -->
+<section id="expertises" aria-labelledby="h-exp">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Trois expertises, une architecture</span>
+      <h2 id="h-exp">Acheter. Piloter. Produire.</h2>
+      <p class="lead">Chaque expertise a sa contribution économique. C'est leur conception conjointe qui fait la différence.</p>
+    </div>
+    <div class="tri">
+      <article class="pillar" style="--c:var(--c-buy)">
+        <div class="top"></div>
+        <div class="body">
+          <h3>ACHETER</h3>
+          <p class="what">Stratégie d'achat d'électricité et de gaz, contrats, couverture, fiscalité, tarifs d'acheminement, PPA.</p>
+          <div class="contribution"><b>Contribution économique</b>Un prix et une structure de contrat alignés sur votre courbe de consommation réelle.</div>
+          <ul><li>Fixe, Full Spot, Bloc + Spot</li><li>PPA et PPA multi-acheteurs</li><li>Contrats groupés multisites</li></ul>
+          <p class="syn"><strong>Avec les deux autres :</strong> des blocs dimensionnés sur votre consommation nette, après solaire et pilotage.</p>
+          <a class="more" href="achat-energie.html">Explorer ACHETER →</a>
+        </div>
+      </article>
+      <article class="pillar" style="--c:var(--c-pilot)">
+        <div class="top"></div>
+        <div class="body">
+          <h3>PILOTER</h3>
+          <p class="what">Efficacité énergétique, management de l'énergie, optimisation des usages et des puissances, flexibilité.</p>
+          <div class="contribution"><b>Contribution économique</b>Moins d'énergie consommée, et consommée au bon moment.</div>
+          <ul><li>Audit, décret tertiaire, BACS</li><li>Effacement et flexibilité</li><li>Optimisation des puissances</li></ul>
+          <p class="syn"><strong>Avec les deux autres :</strong> des consommations déplacées vers les heures de production solaire et de prix bas.</p>
+          <a class="more" href="flexibilite-performance.html">Explorer PILOTER →</a>
+        </div>
+      </article>
+      <article class="pillar" style="--c:var(--c-prod)">
+        <div class="top"></div>
+        <div class="body">
+          <h3>PRODUIRE</h3>
+          <p class="what">Conception et développement de la production locale, photovoltaïque, intégrée au stockage et aux consommations.</p>
+          <div class="contribution"><b>Contribution économique</b>Un kWh produit sur place, moins cher que le kWh acheté, et mieux valorisé.</div>
+          <ul><li>Toitures, ombrières, sol</li><li>Autoconsommation et stockage</li><li>Étude, maîtrise d'œuvre, réalisation</li></ul>
+          <p class="syn"><strong>Avec les deux autres :</strong> une centrale dimensionnée pour vos usages et votre contrat, pas seulement pour votre toit.</p>
+          <a class="more" href="production-energie.html">Explorer PRODUIRE →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ ÉCRAN 7 — RÉSULTATS CLIENTS ═════════ -->
+<section id="resultats" style="background:var(--surface)" aria-labelledby="h-res">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Résultats clients</span>
+      <h2 id="h-res">Des cas concrets, des chiffres détaillés.</h2>
+      <p class="lead">Sites anonymisés, courbes de charge réelles, tous leviers calculés ensemble.</p>
+    </div>
+    <div class="cases">
+      <article class="case case--main">
+        <span class="sector">Agroalimentaire · fromagerie industrielle</span>
+        <h3>Un process continu : produire sur place, acheter au plus juste</h3>
+        <p>Process et froid tournent jour et nuit : une consommation régulière d'environ 13,6 GWh par an, idéale pour produire sur place et se couvrir par blocs.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m">−29 %</div><div class="l">Facture d'énergie</div></div>
+          <div class="metric"><div class="m">293 k€/an</div><div class="l">Économies</div></div>
+          <div class="metric"><div class="m">2,1 M€</div><div class="l">Investissement</div></div>
+          <div class="metric"><div class="m">7,7 ans</div><div class="l">Retour sur investissement</div></div>
+        </div>
+        <div class="pills"><span>Ombrières 1,1 MWc</span><span>Batterie 1,5 MW</span><span>Bloc + Spot</span></div>
+        <a class="case-link" href="#architect" data-open-case="fromagerie">Voir le détail levier par levier →</a>
+      </article>
+      <article class="case">
+        <span class="sector">Logistique du froid · trois entrepôts</span>
+        <h3>Une base stable : se couvrir par blocs et produire</h3>
+        <p>Le froid ne s'arrête jamais : une consommation d'environ 12,2 GWh par an, très stable.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m">−26 %</div><div class="l">Facture d'énergie</div></div>
+          <div class="metric"><div class="m">240 k€/an</div><div class="l">Économies</div></div>
+          <div class="metric"><div class="m">1,1 M€</div><div class="l">Investissement</div></div>
+          <div class="metric"><div class="m">5,1 ans</div><div class="l">Retour sur investissement</div></div>
+        </div>
+        <div class="pills"><span>Ombrières 285 kWc</span><span>Batterie 1,5 MW</span><span>Bloc + Spot</span></div>
+        <a class="case-link" href="#architect" data-open-case="entrepots">Voir le détail levier par levier →</a>
+      </article>
+      <article class="case">
+        <span class="sector">Grande distribution · réseau de supermarchés</span>
+        <h3>80 sites : un achat groupé pensé pour le réseau</h3>
+        <p>Stratégie d'achat groupé combinant Full Flex et blocs + spot, sur 80 sites en France.</p>
+        <div class="pills"><span>Achat groupé</span><span>Full Flex</span><span>Blocs + spot</span></div>
+        <a class="case-link" href="references.html">Toutes nos références →</a>
+      </article>
+    </div>
+    <p class="legal-note">Les deux premiers cas sont des simulations sur douze mois de courbes de charge réelles anonymisées, composante énergie de la facture. Références anonymisées, sans réidentification possible.</p>
+  </div>
+</section>
+
+<!-- ═════════ ÉCRAN 8 — CRÉDIBILITÉ ═════════ -->
+<section class="band" id="credibilite" aria-labelledby="h-cred">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Crédibilité</span>
+      <h2 id="h-cred">Une équipe d'ingénieurs, de l'étude à la réalisation.</h2>
+    </div>
+    <div class="cred-grid">
+      <div>
+        <ul class="cred-list">
+          <li><b>≈ 40 ingénieurs pluridisciplinaires :</b> marchés de l'énergie, thermique, électricité, photovoltaïque, données.</li>
+          <li><b>Expertise normative :</b> audits énergétiques (NF EN 16247), management de l'énergie (ISO 50001).</li>
+          <li><b>Projets complexes :</b> réseaux multisites, groupements d'achat, centrales photovoltaïques.</li>
+          <li><b>Indépendance :</b> nous n'achetons ni ne vendons d'énergie.</li>
+          <li><b>Références clients</b> présentées avec leur accord, sous forme anonymisée sinon.</li>
+        </ul>
+        <ol class="steps" aria-label="De l'étude à la réalisation">
+          <li><span><b>Diagnostic</b> — vos données, votre situation de référence</span></li>
+          <li><span><b>Architecture</b> — scénarios modélisés dans GB Energy Architect</span></li>
+          <li><span><b>Ingénierie</b> — dimensionnement et consultations</span></li>
+          <li><span><b>Mise en œuvre</b> — maîtrise d'œuvre, contrats</span></li>
+          <li><span><b>Pilotage continu</b> — suivi des gains réels</span></li>
+        </ol>
+      </div>
+      <div>
+        <div class="stats">
+          <div class="stat"><div class="n">≈ 40</div><div class="t">ingénieurs</div></div>
+          <div class="stat"><div class="n">2005</div><div class="t">année de création</div></div>
+          <div class="stat"><div class="n">+2 000</div><div class="t">audits énergétiques réalisés</div></div>
+          <div class="stat"><div class="n">+5 GWc</div><div class="t">de projets photovoltaïques étudiés et accompagnés</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ SECTEURS ═══════ -->
-<section class="section" id="secteurs">
-  <div class="section-header">
-    <div class="section-tag">Nos secteurs</div>
-    <h2>Une expertise adaptée à votre secteur d'activité</h2>
-    <p class="lead">Les enjeux énergétiques varient fortement selon les secteurs. GREENBIRDIE dispose d'une connaissance approfondie de chaque secteur et adapte ses recommandations aux contraintes réglementaires, techniques et économiques qui vous sont propres.</p>
-  </div>
-
-  <div class="features-grid">
-    <a href="secteurs/grande-distribution.html" class="feature-card" style="text-decoration:none;">
-      <div class="feature-icon">🛒</div>
-      <h3>Grande distribution et commerce</h3>
-      <p>Hypermarchés, supermarchés, centres commerciaux, réseaux de points de vente. Contrats groupes, PPA multiacheteurs, obligations photovoltaïques, décret tertiaire.</p>
-    </a>
-    <a href="secteurs/logistique.html" class="feature-card" style="text-decoration:none;">
-      <div class="feature-icon">🏭</div>
-      <h3>Logistique et immobilier logistique</h3>
-      <p>Entrepôts, plateformes, foncières logistiques. Grandes toitures photovoltaïques, recharge électrique des flottes, décret tertiaire, valorisation des actifs.</p>
-    </a>
-    <a href="secteurs/hotellerie.html" class="feature-card" style="text-decoration:none;">
-      <div class="feature-icon">🏨</div>
-      <h3>Hôtellerie et tourisme</h3>
-      <p>Groupes hôteliers, villages de vacances, campings, parcs de loisirs. Décret tertiaire, performance énergétique, eau chaude, autoconsommation, saisonnalité.</p>
-    </a>
-    <a href="secteurs/industrie.html" class="feature-card" style="text-decoration:none;">
-      <div class="feature-icon">⚙️</div>
-      <h3>Industrie et ETI</h3>
-      <p>Groupes industriels, sites électro-intensifs, ETI multisites. Stratégie d'achat, PPA et VPPA, flexibilité des procédés, effacement, décarbonation.</p>
-    </a>
-    <a href="secteurs/tertiaire.html" class="feature-card" style="text-decoration:none;">
-      <div class="feature-icon">🏢</div>
-      <h3>Tertiaire et immobilier</h3>
-      <p>Bureaux, foncières, collectivités, santé, enseignement. Décret tertiaire, BACS, pilotage patrimonial multisite, plans pluriannuels d'investissement.</p>
-    </a>
-    <a href="contact.html" class="feature-card" style="text-decoration:none;border-style:dashed;">
-      <div class="feature-icon">💬</div>
-      <h3>Votre secteur n'est pas listé ?</h3>
-      <p>GREENBIRDIE intervient dans de nombreux secteurs d'activité. Contactez-nous pour évaluer comment nous pouvons vous accompagner dans votre stratégie énergétique.</p>
-    </a>
+<!-- ═════════ SECTEURS ═════════ -->
+<section id="secteurs" aria-labelledby="h-sect" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:24px">
+      <span class="eyebrow">Secteurs</span>
+      <h2 id="h-sect" style="font-size:clamp(24px,3vw,34px)">Votre profil énergétique, votre secteur.</h2>
+    </div>
+    <div class="chips">
+      <a class="chip" href="secteurs/grande-distribution.html" style="text-decoration:none">Grande distribution</a>
+      <a class="chip" href="secteurs/industrie.html" style="text-decoration:none">Industrie et ETI</a>
+      <a class="chip" href="secteurs/logistique.html" style="text-decoration:none">Logistique</a>
+      <a class="chip" href="secteurs/tertiaire.html" style="text-decoration:none">Tertiaire et immobilier</a>
+      <a class="chip" href="secteurs/hotellerie.html" style="text-decoration:none">Hôtellerie</a>
+    </div>
   </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- ═══════ PLATEFORME NUMÉRIQUE ═══════ -->
-<section class="section--dark">
-  <div class="section-inner">
-    <div class="section section--wide" style="padding-top:0;padding-bottom:0;">
-      <div class="section-tag">Outils numériques</div>
-      <h2 style="color:white;margin-bottom:16px;">GREENBIRDIE Énergie — votre espace de pilotage</h2>
-      <p class="lead" style="color:rgba(255,255,255,0.55);margin-bottom:48px;max-width:580px;">L'expertise de nos ingénieurs, augmentée par la donnée et l'intelligence artificielle. Un espace numérique inclus dans votre accompagnement pour consolider vos données, suivre vos budgets et piloter vos obligations réglementaires.</p>
-
-      <div class="platform-layout">
-        <div class="platform-bullets">
-          <div class="platform-bullet">
-            <div class="platform-bullet-icon">📊</div>
-            <div>
-              <h4>Consolidation multisite</h4>
-              <p>Visualisez l'ensemble de votre patrimoine énergétique en un seul espace — consommations, coûts, facteurs d'émission, indicateurs réglementaires.</p>
-            </div>
-          </div>
-          <div class="platform-bullet">
-            <div class="platform-bullet-icon">📈</div>
-            <div>
-              <h4>Suivi des marchés et budgets</h4>
-              <p>Cours de l'énergie, positions d'achat, alertes de dépassement budgétaire — vous gardez le contrôle de votre exposition aux marchés.</p>
-            </div>
-          </div>
-          <div class="platform-bullet">
-            <div class="platform-bullet-icon">🎯</div>
-            <div>
-              <h4>Conformité réglementaire</h4>
-              <p>Avancement du Décret Tertiaire, échéances BACS, calendriers de déclaration OPERAT — votre statut réglementaire en temps réel.</p>
-            </div>
-          </div>
-          <div class="platform-bullet">
-            <div class="platform-bullet-icon">🔔</div>
-            <div>
-              <h4>Détection d'anomalies et alertes</h4>
-              <p>L'intelligence artificielle détecte automatiquement les dérives de consommation et vous alerte avant qu'elles n'impactent vos budgets.</p>
-            </div>
-          </div>
-          <div class="platform-bullet">
-            <div class="platform-bullet-icon">⚡</div>
-            <div>
-              <h4>Optimisation en temps réel</h4>
-              <p>Identification automatique des flexibilités valorisables, fenêtres d'effacement et opportunités d'optimisation selon les prix spot.</p>
-            </div>
-          </div>
-        </div>
-        <div class="platform-screenshot">
-          <img src="assets/images/plateforme%20ia.jpg" alt="Tableau de bord GREENBIRDIE Énergie — consolidation et pilotage énergétique multisite" loading="lazy">
+<!-- ═════════ ÉCRAN 9 — CONVERSION ═════════ -->
+<section class="conv" id="diagnostic" aria-labelledby="h-conv">
+  <div class="wrap conv-grid">
+    <div>
+      <span class="eyebrow">Diagnostic de potentiel énergétique 360°</span>
+      <h2 id="h-conv">Et si nous calculions ensemble le potentiel de votre architecture énergétique ?</h2>
+      <p class="lead">Quelques informations suffisent pour que nos ingénieurs préparent une première analyse personnalisée.</p>
+      <div class="ctrl" style="margin-top:24px">
+        <div class="lbl" id="lblPersona">Votre angle</div>
+        <div class="chips" role="group" aria-labelledby="lblPersona" id="personas">
+          <button type="button" class="chip" data-p="dg" aria-pressed="false">Direction générale</button>
+          <button type="button" class="chip" data-p="daf" aria-pressed="false">Direction financière</button>
+          <button type="button" class="chip" data-p="dt" aria-pressed="false">Technique / énergie</button>
+          <button type="button" class="chip" data-p="immo" aria-pressed="false">Immobilier</button>
+          <button type="button" class="chip" data-p="reseau" aria-pressed="false">Réseau multisite</button>
         </div>
       </div>
+      <p class="persona-msg" id="personaMsg" aria-live="polite">Choisissez votre fonction pour voir ce que le 360° change pour vous.</p>
     </div>
-  </div>
-</section>
 
-<!-- ═══════ ÉTUDES DE CAS ═══════ -->
-<section class="section">
-  <div class="section-header">
-    <div class="section-tag">Études de cas</div>
-    <h2>Des résultats concrets pour des entreprises comme la vôtre</h2>
-    <p class="lead">Chaque mission est différente. Ce qui ne change pas, c'est notre méthode : analyser vos données, construire une stratégie sur mesure, la mettre en œuvre et mesurer les résultats.</p>
-  </div>
-
-  <div class="cards-grid">
-    <div class="card">
-      <div class="section-tag section-tag--blue" style="font-size:9px;margin-bottom:8px;">Grande distribution</div>
-      <h3>Regroupement de contrats multisites</h3>
-      <p>Réseau de supermarchés — 80 sites France. Mise en place d'une stratégie d'achat groupé combinant Full Flex et blocs + spot.</p>
-      <div class="tags">
-        <span class="tag">Achat groupé</span>
-        <span class="tag">Full Flex</span>
-        <span class="tag">80 sites</span>
+    <form class="form" id="diagForm" name="diagnostic-360" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="diagnostic-360">
+      <p hidden><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="row">
+        <div class="field"><label for="f-nom">Nom et prénom</label><input type="text" id="f-nom" name="nom" autocomplete="name" required></div>
+        <div class="field"><label for="f-mail">Email professionnel</label><input type="email" id="f-mail" name="email" autocomplete="email" required></div>
       </div>
-    </div>
-    <div class="card">
-      <div class="section-tag" style="font-size:9px;margin-bottom:8px;color:#b8962e;">Logistique</div>
-      <h3>Centrale photovoltaïque sur toiture d'entrepôt</h3>
-      <p>Plateforme logistique — grande toiture sud disponible. Étude de faisabilité, autorisations, maîtrise d'œuvre et valorisation de la production en autoconsommation.</p>
-      <div class="tags">
-        <span class="tag">Photovoltaïque</span>
-        <span class="tag">Autoconsommation</span>
-        <span class="tag">Maîtrise d'œuvre</span>
+      <div class="row">
+        <div class="field"><label for="f-soc">Entreprise</label><input type="text" id="f-soc" name="entreprise" autocomplete="organization" required></div>
+        <div class="field"><label for="f-fn">Fonction</label>
+          <select id="f-fn" name="fonction"><option value="">Choisir…</option><option value="dg">Direction générale</option><option value="daf">Direction financière</option><option value="dt">Direction technique / énergie</option><option value="immo">Direction immobilière</option><option value="reseau">Responsable de réseau multisite</option><option value="autre">Autre</option></select></div>
       </div>
-    </div>
-    <div class="card">
-      <div class="section-tag section-tag--green" style="font-size:9px;margin-bottom:8px;">Industrie</div>
-      <h3>PPA multiacheteurs pour groupement industriel</h3>
-      <p>Groupement de 5 ETI — constitution d'un groupement d'achat pour accéder à un PPA solaire. Structuration juridique, consultation producteurs, analyse des offres.</p>
-      <div class="tags">
-        <span class="tag">PPA</span>
-        <span class="tag">Multiacheteurs</span>
-        <span class="tag">ETI</span>
+      <div class="row">
+        <div class="field"><label for="f-sec">Secteur d'activité</label>
+          <select id="f-sec" name="secteur"><option value="">Choisir…</option><option>Grande distribution</option><option>Industrie</option><option>Logistique</option><option>Immobilier tertiaire</option><option>Hôtellerie</option><option>Autre</option></select></div>
+        <div class="field"><label for="f-sites">Nombre de sites</label>
+          <select id="f-sites" name="sites"><option value="">Choisir…</option><option value="1">1 site</option><option value="2-9">2 à 9</option><option value="10-49">10 à 49</option><option value="50+">50 et plus</option></select></div>
       </div>
-    </div>
-  </div>
-
-  <div class="text-center mt-40">
-    <a href="references.html" class="btn btn--outline">
-      Voir toutes nos références
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+      <div class="row">
+        <div class="field"><label for="f-conso">Consommation annuelle</label>
+          <select id="f-conso" name="conso"><option value="">Choisir…</option><option value="<1">Moins de 1 GWh</option><option value="1-5">1 à 5 GWh</option><option value="5-20">5 à 20 GWh</option><option value="20+">Plus de 20 GWh</option><option value="nsp">Je ne sais pas</option></select></div>
+        <div class="field"><label for="f-budget">Budget énergie annuel</label>
+          <select id="f-budget" name="budget"><option value="">Choisir…</option><option value="<200">Moins de 200 k€</option><option value="200-1000">200 k€ à 1 M€</option><option value="1-5">1 à 5 M€</option><option value="5+">Plus de 5 M€</option><option value="nsp">Je ne sais pas</option></select></div>
+      </div>
+      <div class="field"><fieldset><legend>Installations photovoltaïques</legend>
+        <div class="opts"><label><input type="radio" name="pv" value="oui"> Oui</label><label><input type="radio" name="pv" value="projet"> En projet</label><label><input type="radio" name="pv" value="non"> Non</label></div></fieldset></div>
+      <div class="field"><fieldset><legend>Vos principaux enjeux</legend>
+        <div class="opts"><label><input type="checkbox" name="enjeux" value="prix"> Prix d'achat</label><label><input type="checkbox" name="enjeux" value="conso"> Consommations</label><label><input type="checkbox" name="enjeux" value="prod"> Production locale</label><label><input type="checkbox" name="enjeux" value="regl"> Réglementation</label></div></fieldset></div>
+      <label class="consent"><input type="checkbox" id="f-rgpd" name="consentement" value="oui" required><span>J'accepte que GREENBIRDIE utilise ces informations pour me recontacter au sujet de ma demande. <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a>.</span></label>
+      <button class="btn btn--primary" type="submit">Demander mon diagnostic 360° <span aria-hidden="true">→</span></button>
+      <div class="form-result" id="formResult" role="status" tabindex="-1"></div>
+    </form>
   </div>
 </section>
 
-<!-- ═══════ VEILLE & PUBLICATIONS ═══════ -->
-<section class="publications-section" aria-label="Veille et publications">
-  <div style="max-width:var(--max-w);margin:0 auto;">
-    <div class="section-tag" style="color:var(--gold);">Veille &amp; Publications</div>
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-top:12px;">
-      <h2 style="color:white;max-width:560px;margin:0;">Analyses techniques<br>et décryptages marché</h2>
-      <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link" style="flex-shrink:0;">
-        Toutes les publications
-        <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
-      </a>
+<!-- ═════════ RESSOURCES ═════════ -->
+<section id="ressources" style="padding-top:0" aria-labelledby="h-ress">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:24px">
+      <span class="eyebrow">Ressources</span>
+      <h2 id="h-ress" style="font-size:clamp(24px,3vw,34px)">Comprendre l'optimisation globale de l'énergie.</h2>
     </div>
-
-    <div class="pub-grid">
-      <article class="pub-card">
-        <span class="pub-tag">Marchés de l'énergie</span>
-        <h3>Stratégie d'achat 2026&nbsp;: comment sécuriser vos budgets dans un marché volatil</h3>
-        <p>Les prix de l'énergie restent structurellement instables. Entre tensions géopolitiques, part croissante des renouvelables et mécanismes de capacité en évolution, définir une stratégie d'achat cohérente exige une lecture fine du marché et une adaptation continue du calendrier de couverture.</p>
-        <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link">
-          Lire l'analyse technique
-          <i data-lucide="arrow-up-right" style="width:13px;height:13px;"></i>
-        </a>
-      </article>
-
-      <article class="pub-card">
-        <span class="pub-tag">Réglementation</span>
-        <h3>Décret Tertiaire&nbsp;: les 3 écueils qui exposent les foncières à des sanctions</h3>
-        <p>Périmètre mal délimité, données de consommation non fiabilisées, déclaration OPERAT incomplète : trois erreurs récurrentes que nous observons chez les gestionnaires de portefeuilles tertiaires. Comment les anticiper avant les premières mises en demeure.</p>
-        <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link">
-          Lire l'analyse technique
-          <i data-lucide="arrow-up-right" style="width:13px;height:13px;"></i>
-        </a>
-      </article>
-
-      <article class="pub-card">
-        <span class="pub-tag">PPA &amp; Financement</span>
-        <h3>PPA multiacheteurs&nbsp;: structurer un groupement pour accéder au solaire long terme</h3>
-        <p>Un PPA solaire est inaccessible en dessous de 5 à 10 GWh/an de consommation. Le groupement multiacheteurs permet à des ETI ou des réseaux de franchisés d'atteindre ce seuil. Retour sur la structuration juridique, les points de négociation clés et les risques à anticiper.</p>
-        <a href="https://www.linkedin.com/company/greenbirdie" target="_blank" rel="noopener" class="pub-link">
-          Lire l'analyse technique
-          <i data-lucide="arrow-up-right" style="width:13px;height:13px;"></i>
-        </a>
-      </article>
+    <div class="chips">
+      <a class="chip" href="blog/flexibilite-implicite-explicite.html" style="text-decoration:none">Flexibilité implicite, flexibilité explicite</a>
+      <a class="chip" href="blog/prix-negatifs-nucleaire.html" style="text-decoration:none">Prix négatifs : qui paie ?</a>
+      <a class="chip" href="blog/contrats-multiacheteurs-ppa.html" style="text-decoration:none">PPA multi-acheteurs</a>
+      <a class="chip" href="blog/ombrieres-eulalie.html" style="text-decoration:none">Ombrières : une vision globale</a>
+      <a class="chip" href="blog/index.html" style="text-decoration:none">Toutes les analyses →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════ CTA FINAL ═══════ -->
-<section class="cta-section">
-  <h2>Prêt à prendre le contrôle de votre énergie ?</h2>
-  <p>Un diagnostic de 30 minutes avec un ingénieur GREENBIRDIE suffit souvent à identifier les premiers leviers d'action — sur vos achats, vos consommations ou votre production.</p>
-  <div class="cta-actions">
-    <a href="contact.html" class="btn btn--white btn--lg">
-      Demander un diagnostic gratuit
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <a href="tel:+33144081050" class="btn btn--outline-white">01 44 08 10 50</a>
-  </div>
-</section>
+</main>
 
-<!-- ═══════ FOOTER ═══════ -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-col">
-      <a href="/" class="nav-logo">
-        <img src="assets/images/logo-greenbirdie.png" alt="GREENBIRDIE" style="height:32px;margin-bottom:12px;" onerror="this.style.display='none'">
-      </a>
-      <p class="footer-tagline">L'énergie optimiste</p>
-      <p style="font-size:13px;color:rgba(255,255,255,0.35);line-height:1.6;">Cabinet d'ingénierie et de conseil en énergie, indépendant, fondé en 2005.<br>Paris · Bordeaux · Toulouse · Nantes · La Réunion</p>
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="logo-plate" href="/"><img src="assets/images/logo-greenbirdie.png" alt="GREENBIRDIE" width="123" height="28"></a>
+        <p>Architecte de la transition énergétique.<br>Cabinet d'ingénierie et de conseil en énergie, indépendant, fondé en 2005.<br>Paris · Bordeaux · Toulouse · Nantes · La Réunion</p>
+      </div>
+      <div><h4>Expertises</h4><ul><li><a href="achat-energie.html">Acheter</a></li><li><a href="flexibilite-performance.html">Piloter</a></li><li><a href="production-energie.html">Produire</a></li><li><a href="notre-approche.html">Notre approche</a></li><li><a href="reglementation.html">Réglementation</a></li></ul></div>
+      <div><h4>Secteurs</h4><ul><li><a href="secteurs/grande-distribution.html">Grande distribution</a></li><li><a href="secteurs/logistique.html">Logistique</a></li><li><a href="secteurs/hotellerie.html">Hôtellerie</a></li><li><a href="secteurs/industrie.html">Industrie et ETI</a></li><li><a href="secteurs/tertiaire.html">Tertiaire</a></li></ul></div>
+      <div><h4>GREENBIRDIE</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="references.html">Références</a></li><li><a href="blog/index.html">Ressources</a></li><li><a href="contact.html">Contact</a></li><li><a href="tel:+33144081050">01 44 08 10 50</a></li><li><a href="mailto:contact@greenbirdie.com">contact@greenbirdie.com</a></li></ul></div>
     </div>
-    <div class="footer-col">
-      <h4>Expertises</h4>
-      <ul>
-        <li><a href="achat-energie.html">Achat d'énergie</a></li>
-        <li><a href="achat-energie.html#ppa">PPA et VPPA</a></li>
-        <li><a href="flexibilite-performance.html">Performance énergétique</a></li>
-        <li><a href="flexibilite-performance.html#effacement">Effacement et flexibilité</a></li>
-        <li><a href="production-energie.html">Production photovoltaïque</a></li>
-        <li><a href="notre-approche.html">Notre approche</a></li>
-        <li><a href="blog/index.html">Ressources</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Secteurs</h4>
-      <ul>
-        <li><a href="secteurs/grande-distribution.html">Grande distribution</a></li>
-        <li><a href="secteurs/logistique.html">Logistique</a></li>
-        <li><a href="secteurs/hotellerie.html">Hôtellerie</a></li>
-        <li><a href="secteurs/industrie.html">Industrie et ETI</a></li>
-        <li><a href="secteurs/tertiaire.html">Tertiaire</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>GREENBIRDIE</h4>
-      <ul>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="references.html">Références</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="mailto:contact@greenbirdie.com">contact@greenbirdie.com</a></li>
-        <li><a href="tel:+33144081050">01 44 08 10 50</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2026 GREENBIRDIE EURL — Expert en transition énergétique depuis 2005 — Paris 14e</p>
-    <div class="footer-legal">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="mentions-legales.html#confidentialite">Confidentialité</a>
-      <a href="mentions-legales.html#cookies">Cookies</a>
-    </div>
+    <p class="legal">© 2026 GREENBIRDIE EURL — Paris 14e · <a href="mentions-legales.html">Mentions légales</a> · <a href="mentions-legales.html#confidentialite">Confidentialité</a> · <a href="mentions-legales.html#cookies">Cookies</a></p>
   </div>
 </footer>
 
-<script src="assets/js/nav.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-  // Lucide icons
-  lucide.createIcons();
-</script>
+<script src="assets/js/nav.js?v=20261023"></script>
+<script src="assets/js/home-360.js?v=20261023"></script>
 </body>
 </html>
