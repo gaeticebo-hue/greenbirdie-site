@@ -73,9 +73,10 @@
   $$('[data-silo]').forEach(b => b.addEventListener('click', () => { siloMode = b.dataset.silo; $$('[data-silo]').forEach(x => x.setAttribute('aria-pressed', x === b)); drawSilo(); }));
 
   /* ───────── Modèle illustratif (hypothèses simplifiées, non issues de dossiers clients) ─────────
-     Économies calculées levier par levier, en % de la facture : Acheter 5 %, Piloter 4 %, Produire 7 %.
-     Recouvrement total = « recouvrement » (3 à 12 %) × somme de ces économies,
-     réparti : A+P 22 %, A+R 28 %, P+R 28 %, A+P+R 22 %. Le gain coordonné est la somme moins le recouvrement. */
+     Économies d'une approche en silos, en % de la facture : Acheter 5 %, Piloter 4 %, Produire 7 %
+     (déjà nettes du recouvrement entre leviers : le deuxième levier apporte moins que seul).
+     Gain additionnel de la coordination = « complémentarité » (3 à 12 %) × économies en silos,
+     réparti : A+P 22 %, A+R 28 %, P+R 28 %, A+P+R 22 %. */
   const BASE = { a: 0.05, p: 0.04, r: 0.07 };
   const W = { ap: 0.22, ar: 0.28, pr: 0.28, apr: 0.22 };
   const NAMES = { a: 'Acheter', p: 'Piloter', r: 'Produire' };
@@ -87,10 +88,10 @@
     const pair = { ap: W.ap * T, ar: W.ar * T, pr: W.pr * T }, tri = W.apr * T;
     const on = x => sel[x];
     const sepSel = 'apr'.split('').filter(on).reduce((s, x) => s + sep[x], 0);
-    const pairSel = {}; let ov = 0;
-    for (const p of ['ap', 'ar', 'pr']) { pairSel[p] = on(p[0]) && on(p[1]) ? pair[p] : 0; ov += pairSel[p]; }
-    const triSel = on('a') && on('p') && on('r') ? tri : 0; ov += triSel;
-    return { sep, sepSel, pair: pairSel, tri: triSel, ov, coord: sepSel - ov, full: sepAll };
+    const pairSel = {}; let syn = 0;
+    for (const p of ['ap', 'ar', 'pr']) { pairSel[p] = on(p[0]) && on(p[1]) ? pair[p] : 0; syn += pairSel[p]; }
+    const triSel = on('a') && on('p') && on('r') ? tri : 0; syn += triSel;
+    return { sep, sepSel, pair: pairSel, tri: triSel, syn, coord: sepSel + syn, full: sepAll + T };
   }
 
   /* ───────── Écran 3 : démonstrateur ───────── */
@@ -105,12 +106,12 @@
       const lx = mx + dx, ly = my + dy;
       if (on) {
         el('rect', { x: lx - 36, y: ly - 14, width: 72, height: 26, rx: 13, fill: css('--sun'), stroke: css('--c-syn-line'), 'stroke-width': 1.5 }, svg);
-        txt(svg, lx, ly + 4, '−' + NF0.format(Math.round(m.pair[key])), { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 800, fill: css('--on-sun') });
+        txt(svg, lx, ly + 4, '+' + NF0.format(Math.round(m.pair[key])), { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 800, fill: css('--on-sun') });
       } else txt(svg, lx, ly + 4, '—', { 'text-anchor': 'middle', 'font-size': 14, fill: css('--muted') });
     });
     const all = ST.sel.a && ST.sel.p && ST.sel.r;
     el('circle', { cx: C[0], cy: C[1], r: 34, fill: all ? css('--sun') : '#fff', stroke: all ? css('--c-syn-line') : css('--line'), 'stroke-width': all ? 3 : 2, 'stroke-dasharray': all ? '' : '5 5' }, svg);
-    txt(svg, C[0], C[1] - 2, all ? '−' + NF0.format(Math.round(m.tri)) : '—', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 800, fill: all ? css('--on-sun') : css('--muted') });
+    txt(svg, C[0], C[1] - 2, all ? '+' + NF0.format(Math.round(m.tri)) : '—', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 800, fill: all ? css('--on-sun') : css('--muted') });
     txt(svg, C[0], C[1] + 15, all ? 'k€ à trois' : '', { 'text-anchor': 'middle', 'font-size': 10.5, fill: '#173E39' });
     'apr'.split('').forEach(x => {
       const on = ST.sel[x];
@@ -122,46 +123,42 @@
     const svg = $('#barSvg'); svg.innerHTML = ''; defs(svg, 'hSun');
     const Y0 = 252, H = 190, maxV = Math.max(m.full, 1), Y = v => Y0 - H * v / maxV, bw = 96, xs = [44, 180];
     el('line', { x1: 20, x2: 310, y1: Y0, y2: Y0, stroke: css('--ink'), 'stroke-width': 1.5 }, svg);
-    let cum = 0;
-    'apr'.split('').filter(l => ST.sel[l]).forEach(l => {
+    const stack = x => { let cum = 0; 'apr'.split('').filter(l => ST.sel[l]).forEach(l => {
       const v = m.sep[l], y1 = Y(cum + v), y0 = Y(cum), h = y0 - y1; cum += v;
-      el('rect', { x: xs[0], y: y1, width: bw, height: h, fill: ({ a: css('--c-buy'), p: css('--c-pilot'), r: css('--c-prod') })[l], stroke: css('--c-syn-line'), 'stroke-width': 1.5 }, svg);
-      if (h > 20) txt(svg, xs[0] + bw / 2, y1 + h / 2 + 4, NAMES[l] + ' ' + NF0.format(Math.round(v)), { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 700, fill: l === 'r' ? '#173E39' : '#fff' });
-    });
-    txt(svg, xs[0] + bw / 2, Y(m.sepSel) - 8, NF0.format(Math.round(m.sepSel)) + ' k€', { 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 800, fill: css('--ink') });
-    el('rect', { x: xs[1], y: Y(m.coord), width: bw, height: Math.max(2, Y0 - Y(m.coord)), fill: css('--brand-deep'), stroke: css('--c-syn-line'), 'stroke-width': 1.5 }, svg);
-    txt(svg, xs[1] + bw / 2, Y0 - (Y0 - Y(m.coord)) / 2 + 4, NF0.format(Math.round(m.coord)) + ' k€', { 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 800, fill: '#fff' });
-    if (m.ov > 0) {
-      const y1 = Y(m.sepSel), h = Y(m.coord) - y1;
-      el('rect', { x: xs[1], y: y1, width: bw, height: h, fill: 'url(#hSun)', stroke: css('--c-syn-line'), 'stroke-width': 2, 'stroke-dasharray': '5 3' }, svg);
-      txt(svg, xs[1] + bw / 2, y1 - 8, '−' + NF0.format(Math.round(m.ov)) + ' k€', { 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 800, fill: css('--ink') });
-      el('line', { x1: xs[0] + bw, x2: xs[1], y1: Y(m.sepSel), y2: Y(m.sepSel), stroke: css('--c-syn-line'), 'stroke-dasharray': '4 4' }, svg);
-    } else txt(svg, xs[1] + bw / 2, Y(m.coord) - 8, 'aucun recouvrement', { 'text-anchor': 'middle', 'font-size': 11.5, fill: css('--muted') });
-    [['Somme levier', 'par levier', xs[0]], ['Calcul', 'coordonné', xs[1]]].forEach(([a, b, x]) => {
-      txt(svg, x + bw / 2, Y0 + 18, a, { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 700, fill: css('--ink') });
-      txt(svg, x + bw / 2, Y0 + 34, b, { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 700, fill: css('--ink') });
-    });
+      el('rect', { x, y: y1, width: bw, height: h, fill: ({ a: css('--c-buy'), p: css('--c-pilot'), r: css('--c-prod') })[l], stroke: css('--c-syn-line'), 'stroke-width': 1.5 }, svg);
+      if (h > 20) txt(svg, x + bw / 2, y1 + h / 2 + 4, NAMES[l] + ' ' + NF0.format(Math.round(v)), { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 700, fill: l === 'r' ? '#173E39' : '#fff' });
+    }); return cum; };
+    const top1 = stack(xs[0]), top2 = stack(xs[1]);
+    if (m.syn > 0) {
+      const y1 = Y(top2 + m.syn), h = Y(top2) - y1;
+      el('rect', { x: xs[1], y: y1, width: bw, height: h, fill: 'url(#hSun)', stroke: css('--c-syn-line'), 'stroke-width': 2 }, svg);
+      txt(svg, xs[1] + bw / 2, y1 - 8, '+' + NF0.format(Math.round(m.syn)) + ' k€', { 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 800, fill: css('--ink') });
+      el('line', { x1: xs[0] + bw, x2: xs[1], y1: Y(top1), y2: Y(top1), stroke: css('--c-syn-line'), 'stroke-dasharray': '4 4' }, svg);
+    } else txt(svg, xs[1] + bw / 2, Y(top2) - 8, 'rien à coordonner', { 'text-anchor': 'middle', 'font-size': 11.5, fill: css('--muted') });
+    txt(svg, xs[0] + bw / 2, Y(top1) - 8, NF0.format(Math.round(top1)) + ' k€', { 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 800, fill: css('--ink') });
+    txt(svg, xs[0] + bw / 2, Y0 + 18, 'En silos', { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 700, fill: css('--ink') });
+    txt(svg, xs[1] + bw / 2, Y0 + 18, 'Coordonné', { 'text-anchor': 'middle', 'font-size': 12.5, 'font-weight': 700, fill: css('--ink') });
     txt(svg, 16, 16, 'k€ d’économies par an', { 'font-size': 13, fill: css('--muted') });
   }
   function renderDemo() {
     const m = model(ST.sel, ST.budget, ST.compl);
     $('#budgetOut').textContent = k(ST.budget);
-    $('#complOut').textContent = '−' + ST.compl + ' %';
+    $('#complOut').textContent = '+' + ST.compl + ' %';
     const n = Object.values(ST.sel).filter(Boolean).length;
     $('#rSep').textContent = k(m.sepSel);
     $('#rCoord').textContent = k(m.coord);
-    const pct = m.sepSel ? m.ov / m.sepSel * 100 : 0;
-    $('#rGain').textContent = m.ov > 0 ? '−' + NF0.format(Math.round(m.ov)) + ' k€ (−' + NF1.format(pct) + ' %)' : 'aucun';
+    const pct = m.sepSel ? m.syn / m.sepSel * 100 : 0;
+    $('#rGain').textContent = m.syn > 0 ? '+' + NF0.format(Math.round(m.syn)) + ' k€ (+' + NF1.format(pct) + ' %)' : 'aucun';
     const pbill = m.coord / ST.budget * 100;
     $('#demoMsg').textContent = n < 2
-      ? 'Un seul levier : pas de recouvrement. Ajoutez-en un second pour voir apparaître le premier chevauchement.'
-      : 'Additionner les gains levier par levier annoncerait ' + k(m.sepSel) + ' par an ; le calcul coordonné en donne ' + k(m.coord) + ' (−' + NF1.format(pct) + ' %). Sur la facture, la baisse est de ' + NF1.format(pbill) + ' %.';
+      ? 'Un seul levier : rien à coordonner. Ajoutez-en un second pour voir apparaître le premier gain d’interaction.'
+      : 'Ici, la facture baisse de ' + NF1.format(pbill) + ' % avec la coordination ; le gain additionnel représente +' + NF1.format(pct) + ' % des économies obtenues en silos. Ce sont deux chiffres différents.';
     drawMap(m); drawBars(m);
-    const rows = 'apr'.split('').filter(l => ST.sel[l]).map(l => '<tr><td>' + NAMES[l] + ' seul</td><td class="n">' + k(m.sep[l]) + '</td></tr>').join('') +
-      '<tr><th>Somme levier par levier</th><th class="n">' + k(m.sepSel) + '</th></tr>' +
-      [['ap', 'Acheter × Piloter'], ['ar', 'Acheter × Produire'], ['pr', 'Piloter × Produire']].map(([key, lab]) => '<tr><td>Recouvrement ' + lab + '</td><td class="n">' + (m.pair[key] ? '−' + k(m.pair[key]) : '—') + '</td></tr>').join('') +
-      '<tr><td>Recouvrement à trois</td><td class="n">' + (m.tri ? '−' + k(m.tri) : '—') + '</td></tr>' +
-      '<tr><th>Calcul coordonné</th><th class="n">' + k(m.coord) + '</th></tr>';
+    const rows = 'apr'.split('').filter(l => ST.sel[l]).map(l => '<tr><td>' + NAMES[l] + ' (en silos)</td><td class="n">' + k(m.sep[l]) + '</td></tr>').join('') +
+      '<tr><th>Économies en silos</th><th class="n">' + k(m.sepSel) + '</th></tr>' +
+      [['ap', 'Acheter × Piloter'], ['ar', 'Acheter × Produire'], ['pr', 'Piloter × Produire']].map(([key, lab]) => '<tr><td>Synergie ' + lab + '</td><td class="n">' + (m.pair[key] ? '+' + k(m.pair[key]) : '—') + '</td></tr>').join('') +
+      '<tr><td>Synergie à trois</td><td class="n">' + (m.tri ? '+' + k(m.tri) : '—') + '</td></tr>' +
+      '<tr><th>Économies coordonnées</th><th class="n">' + k(m.coord) + '</th></tr>';
     $('#demoTable').innerHTML = '<table><caption class="sr-only">Détail des économies illustratives</caption><thead><tr><th>Composante</th><th class="n">Par an</th></tr></thead><tbody>' + rows + '</tbody></table>';
   }
   $$('[data-lev]').forEach(b => b.addEventListener('click', () => {
