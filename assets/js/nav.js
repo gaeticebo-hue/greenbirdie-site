@@ -23,8 +23,21 @@
     <ul class="nav-menu" role="list">
 
       <li class="nav-item">
+        <a href="${b}index.html#approche" class="nav-link">
+          Approche 360°
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="${b}index.html#approche">Pourquoi calculer ensemble</a>
+          <a href="${b}index.html#preuves">La preuve par les chiffres</a>
+          <a href="${b}index.html#architect">GB Energy Architect</a>
+          <a href="${b}notre-approche.html">Notre méthode, du diagnostic au pilotage</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
         <a href="${b}achat-energie.html" class="nav-link">
-          Acheter l'énergie
+          Acheter
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </a>
         <div class="nav-dropdown">
@@ -43,7 +56,7 @@
 
       <li class="nav-item">
         <a href="${b}flexibilite-performance.html" class="nav-link">
-          Consommer au bon moment
+          Piloter
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </a>
         <div class="nav-dropdown">
@@ -60,7 +73,7 @@
 
       <li class="nav-item">
         <a href="${b}production-energie.html" class="nav-link">
-          Produire son énergie
+          Produire
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </a>
         <div class="nav-dropdown">
@@ -73,10 +86,6 @@
           <a href="${b}production-energie.html#moe">Maîtrise d'œuvre</a>
           <a href="${b}production-energie.html#valorisation">Valorisation de la production</a>
         </div>
-      </li>
-
-      <li class="nav-item">
-        <a href="${b}notre-approche.html" class="nav-link">Notre approche</a>
       </li>
 
       <li class="nav-item">
@@ -100,10 +109,6 @@
       </li>
 
       <li class="nav-item">
-        <a href="${b}a-propos.html" class="nav-link">À propos</a>
-      </li>
-
-      <li class="nav-item">
         <a href="${b}blog/index.html" class="nav-link">
           Ressources
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -112,6 +117,10 @@
           <div class="nav-dropdown-section">Contenus</div>
           <a href="${b}blog/index.html">Articles et analyses</a>
           <a href="${b}reglementation.html">Réglementation énergétique</a>
+          <div class="nav-dropdown-section">GREENBIRDIE</div>
+          <a href="${b}a-propos.html">À propos</a>
+          <a href="${b}references.html">Références</a>
+          <a href="${b}contact.html">Contact</a>
         </div>
       </li>
 
@@ -121,8 +130,8 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     </button>
 
-    <a href="${b}contact.html" class="nav-cta">
-      Parler à un expert
+    <a href="${b}index.html#diagnostic" class="nav-cta">
+      Diagnostic 360°
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
 
@@ -134,11 +143,14 @@
 
 <div class="nav-mobile-overlay" role="dialog" aria-label="Menu mobile">
   <ul>
-    <li><a href="${b}achat-energie.html">Acheter l'énergie</a></li>
+    <li><a href="${b}index.html#approche">Approche 360°</a></li>
+    <li><a href="${b}achat-energie.html">Acheter</a></li>
     <li><a href="${b}cader-publics.html">CADER publics et PPA multi-acheteurs</a></li>
-    <li><a href="${b}flexibilite-performance.html">Consommer au bon moment</a></li>
-    <li><a href="${b}production-energie.html">Produire son énergie</a></li>
-    <li><a href="${b}notre-approche.html">Notre approche</a></li>
+    <li><a href="${b}flexibilite-performance.html">Piloter</a></li>
+    <li><a href="${b}production-energie.html">Produire</a></li>
+    <li><a href="${b}index.html#architect">GB Energy Architect</a></li>
+    <li><a href="${b}notre-approche.html">Notre méthode</a></li>
+    <li><a href="${b}index.html#diagnostic">Diagnostic 360°</a></li>
     <div class="nav-mobile-section">Secteurs</div>
     <li><a href="${b}secteurs/grande-distribution.html">Grande distribution</a></li>
     <li><a href="${b}secteurs/logistique.html">Logistique</a></li>
@@ -286,6 +298,7 @@
   const current = window.location.href.split('#')[0].split('?')[0];
   document.querySelectorAll('.nav-link, .nav-dropdown a').forEach(function (link) {
     const linkHref = link.href.split('#')[0].split('?')[0];
+    if (/index\.html/.test(link.getAttribute('href') || '')) return;   // liens d'ancres de l'accueil : pas de surlignage
     if (linkHref && linkHref !== window.location.origin + '/' && current.endsWith(linkHref.split('/').pop())) {
       link.classList.add('active');
       const parentItem = link.closest('.nav-item');
